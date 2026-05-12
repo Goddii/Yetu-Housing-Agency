@@ -15,16 +15,22 @@ function Home(){
             </div>
             <div className="home-mid-section">
                 <div className="card-one">
+                    <h3>+200 Listings</h3>
+                    <p>Premium property listing site</p>
 
                 </div>
                 <div className="card-one">
+                    <h3>Expert Agents</h3>
+                    <p>Proffesional and certified realtors</p>
 
                 </div>
                 <div className="card-one">
-
+                    <h3>+10 yrs Experience</h3>
+                    <p>Trusted in the real estate market</p>
                 </div>
                 <div className="card-one">
-
+                    <h3>Award Winning</h3>
+                    <p>Recognized excellence in service</p>
                 </div>
 
             </div>
