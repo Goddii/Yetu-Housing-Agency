@@ -9,10 +9,23 @@ function Home(){
                     <h1>Find Your Dream Home</h1>
                     <p>Your trusted partner in finding the perfect home.</p>
                 </div> 
-            
+                <div>
                 <Link to='/properties' className="explore-btn">Explore Properties</Link>
+                </div>
             </div>
             <div className="home-mid-section">
+                <div className="card-one">
+
+                </div>
+                <div className="card-one">
+
+                </div>
+                <div className="card-one">
+
+                </div>
+                <div className="card-one">
+
+                </div>
 
             </div>
             <div className="home-featured-section">

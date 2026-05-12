@@ -13,10 +13,10 @@ function Navbar() {
             </div>
 
             <div className="menu-section">
-                <Link to='/'>Home</Link>
-                <Link to='/properties'>Properties</Link>
-                <Link to='/agent'>Agent</Link>
-                <Link to='/contact'>Contact</Link>
+                <Link to='/'><i className="fas fa-house"></i>Home</Link>
+                <Link to='/properties'><i className="fas fa-building"></i>Properties</Link>
+                <Link to='/agent'><i className="fas fa-user-tie"></i>Agent</Link>
+                <Link to='/contact'><i className="fas fa-message"></i> Contact</Link>
                 
 
             </div>
