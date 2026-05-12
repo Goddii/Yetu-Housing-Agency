@@ -9,7 +9,7 @@ function Home(){
         <div className="home-section">
             <div className="home-inside-container">
                 <div className="paragraph-container">
-                    <h1>Find Your Dream Home</h1>
+                    <h1 className="slide-in-title">Find Your Dream Home</h1>
                     <p>Your trusted partner in finding the perfect home.</p>
                 </div> 
                 <div>

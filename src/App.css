@@ -57,6 +57,23 @@
   font-size: 30px;
 }
 
+.slide-in-title {
+  opacity: 0;
+  animation: slideInFromLeft 1s ease-out forwards
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 .home-mid-section {
 
   display: flex;
@@ -94,7 +111,7 @@
 }
 
 .home-featured-section h3{
-  color: blue;
+  color: #007bff;
   font-weight: 700;
   font-size: 25px;
 }
