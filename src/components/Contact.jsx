@@ -1,4 +1,9 @@
-
+import {
+    FaMarketAlt,
+    FaPhoneAlt,
+    FaEnvelop,
+    FaClock,
+} from "react-icons/fa";
 function Contact() {
     return(
         <div className="contact-section">
