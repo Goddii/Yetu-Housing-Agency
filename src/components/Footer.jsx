@@ -27,6 +27,15 @@ function Footer(){
                     <li>Contact Us</li>
                 </ul>
             </div>
+
+            {/*CONTACT*/}
+            <div>
+                <h3>Contact Info</h3>
+                <p>123 Real Estate Ave</p>
+                <p>New York, NY 10001</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@luxeestates.com</p>
+            </div>
          </div>  
         </footer>
         </>
