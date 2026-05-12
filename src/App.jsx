@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Properties from './components/Properties'
 import Agent from './components/Agent'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 
 function App() {
