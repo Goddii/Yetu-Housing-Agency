@@ -1,3 +1,23 @@
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.menu-section{
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  
+  
+}
+
+.menu-section a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
 .home-section {
   min-height: 100vh;
   display: flex;
