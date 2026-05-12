@@ -42,47 +42,36 @@ function Home(){
 
             </div>
             <div className="home-featured-section">
-                <div className="header-section">
-                    <h3>Featured Houses</h3>
-                </div>
-
-                
-                
+                    <div className="header-section">
+                        <h3>Featured Houses</h3>
+                    </div>               
                     <div className="home-card">
                     
                         <div className="image-card">
                             <img src={houseimg} alt="a beautiful house" />
-                        </div>
-                        <div className="image-section">
-                            <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
+                            <div className="image-section">
+                                <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
+
+                            </div>
 
                         </div>
-
-                    </div>
-
-                    <div className="home-card">
                         <div className="image-card">
                             <img src={house3} alt="a beautiful villa" />
+                            <div className="image-section">
+                                <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
+                            </div>
                         </div>
-                        <div className="image-section">
-                            <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
 
-                        </div>
-
-                    </div>
-                    <div className="home-card">
                         <div className="image-card">
                             <img src={house4} alt="a beautiful condo" />
-
-                        </div>
-                        <div className="image-section">
+                            <div className="image-section">
                             <p><i className="fas fa-location-dot"></i>Thika road, Kiambu</p>
-                        
+                            </div>
 
                         </div>
-                    </div>    
+  
 
-            
+                    </div>                
 
             </div>
             <div className="home-last-section">
