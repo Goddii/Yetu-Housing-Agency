@@ -17,7 +17,7 @@ function Footer(){
             </div>
 
             {/*LINKS*/}
-            <div>
+            <div className="footer-box">
                 <h3>Quick Links</h3>
 
                 <ul>
@@ -29,12 +29,25 @@ function Footer(){
             </div>
 
             {/*CONTACT*/}
-            <div>
+            <div className="footer-box"> 
                 <h3>Contact Info</h3>
+
                 <p>123 Real Estate Ave</p>
                 <p>New York, NY 10001</p>
                 <p>Phone: (555) 123-4567</p>
                 <p>Email: info@luxeestates.com</p>
+            </div>
+
+            {/*SOCIALS*/}
+            <div className="footer-box">
+                <h3>Folllow Us</h3>
+
+                <div className="social-icons">
+                    <FaFacebookF /> 
+                    <FaInstagram /> 
+                    <FaTwitter />
+                    <FaLinkedinIn />    
+                </div>
             </div>
          </div>  
         </footer>
