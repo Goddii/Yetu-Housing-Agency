@@ -22,6 +22,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
 
 
 
@@ -207,4 +208,15 @@
   .button-84 {
     height: 48px;
   }
+}
+
+.home-last-section {
+  background-color: #007bff;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 18px;
 }

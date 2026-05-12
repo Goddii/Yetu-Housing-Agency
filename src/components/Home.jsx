@@ -77,12 +77,15 @@ function Home(){
                     </div> 
                     <div className="btn-props">
                         <button className="button-84">View All Properties</button> 
-                    </div>              
+                    </div>  
+                    <div className="home-last-section">
+                        <h4>Ready to Find Your Dream Home?</h4>
+                        <p>Our expert agents are here to help you every step of the way</p>
+
+                    </div>            
 
             </div>
-            <div className="home-last-section">
-
-            </div>    
+    
         </div>
     )
 
