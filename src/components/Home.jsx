@@ -1,5 +1,8 @@
 
 import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
+import houseimg from '../assets/house2.jpg'
+import house3 from '../assets/house3.jpg'
+import house4 from '../assets/house4.jpg'
 
 function Home(){
     return(
@@ -39,33 +42,47 @@ function Home(){
 
             </div>
             <div className="home-featured-section">
-                <div className="home-card">
-                    <div className="image-card">
-                        <img src="" alt="" />
-                    </div>
-                    <div className="image-section">
-
-                    </div>
-
+                <div className="header-section">
+                    <h3>Featured Houses</h3>
                 </div>
-                <div className="home-card">
-                    <div className="image-card">
-                        <img src="" alt="" />
-                    </div>
-                    <div className="image-section">
+
+                
+                
+                    <div className="home-card">
+                    
+                        <div className="image-card">
+                            <img src={houseimg} alt="a beautiful house" />
+                        </div>
+                        <div className="image-section">
+                            <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
+
+                        </div>
 
                     </div>
 
-                </div>
-                <div className="home-card">
-                    <div className="image-card">
+                    <div className="home-card">
+                        <div className="image-card">
+                            <img src={house3} alt="a beautiful villa" />
+                        </div>
+                        <div className="image-section">
+                            <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
+
+                        </div>
 
                     </div>
-                    <div className="image-section">
+                    <div className="home-card">
+                        <div className="image-card">
+                            <img src={house4} alt="a beautiful condo" />
 
-                    </div>
+                        </div>
+                        <div className="image-section">
+                            <p><i className="fas fa-location-dot"></i>Thika road, Kiambu</p>
+                        
 
-                </div>
+                        </div>
+                    </div>    
+
+            
 
             </div>
             <div className="home-last-section">
