@@ -51,6 +51,7 @@ function Home(){
                             <img src={houseimg} alt="a beautiful house" />
                             <div className="image-section">
                                 <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
+                                <p>Unique house</p>
 
                             </div>
 
@@ -59,6 +60,7 @@ function Home(){
                             <img src={house3} alt="a beautiful villa" />
                             <div className="image-section">
                                 <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
+                                <p>Cool house</p>
                             </div>
                         </div>
 
@@ -66,12 +68,16 @@ function Home(){
                             <img src={house4} alt="a beautiful condo" />
                             <div className="image-section">
                             <p><i className="fas fa-location-dot"></i>Thika road, Kiambu</p>
+                            <p>Big house</p>
                             </div>
 
                         </div>
   
 
-                    </div>                
+                    </div> 
+                    <div className="btn-props">
+                        <button className="button-84">View All Properties</button> 
+                    </div>              
 
             </div>
             <div className="home-last-section">
