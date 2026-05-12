@@ -48,6 +48,13 @@
   min-height: 400px;
 
 }
+.paragraph-container h1{
+  font-size: 80px;
+  font-weight: 500;
+}
+.paragraph-container p{
+  font-size: 30px;
+}
 
 .home-mid-section {
 
