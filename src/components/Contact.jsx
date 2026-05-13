@@ -67,10 +67,70 @@ function Contact() {
                         </button>
                     </form>
                 </div>
-                
+
+                {/*RIGHT SIDE FORM*/}
+         <div className="contact-info">
+
+          <div className="info-card">
+
+            <h2>Contact Information</h2>
+
+            <div className="info-item">
+              <FaMapMarkerAlt className="icon" />
+
+              <div>
+                <h4>Office Address</h4>
+                <p>123 Real Estate Ave</p>
+                <p>New York, NY 10001</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <FaPhoneAlt className="icon" />
+
+              <div>
+                <h4>Phone</h4>
+                <p>(555) 123-4567</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <FaEnvelope className="icon" />
+
+              <div>
+                <h4>Email</h4>
+                <p>info@luxeestates.com</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <FaClock className="icon" />
+
+              <div>
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* BLUE BOX */}
+          <div className="help-box">
+            <h3>Need Immediate Assistance?</h3>
+
+            <p>
+              Our team is ready to help you with all your
+              real estate needs.
+            </p>
+          </div>
+
+        </div>
+
             </section>
         </div>
-    )
+    );
 }
 
 export default Contact;
