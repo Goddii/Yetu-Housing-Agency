@@ -11,7 +11,7 @@ function Home(){
             <div className="home-inside-container">
                 <div className="paragraph-container">
                     <h1 className="slide-in-title">Find Your Dream Home</h1>
-                    <p>Your trusted partner in finding the perfect home.</p>
+                    <p className="slide-in-title">Your trusted partner in finding the perfect home.</p>
                 </div> 
                 <div>
                 <button className="button-84"><Link to='/properties' className="explore-btn">Explore Properties</Link></button>
