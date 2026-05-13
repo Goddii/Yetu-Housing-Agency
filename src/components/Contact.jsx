@@ -130,7 +130,7 @@
             </div>
 
                 </section>
-                < Footer/>
+                
 
             </div>
         );

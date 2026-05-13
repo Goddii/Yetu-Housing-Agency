@@ -1,3 +1,4 @@
+
 /* HERO */ 
 .contact-hero { 
   background: #1d4dff; 
@@ -197,7 +198,7 @@
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
 
   display: grid;
