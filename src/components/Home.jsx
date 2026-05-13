@@ -4,6 +4,7 @@ import houseimg from '../assets/house2.jpg'
 import house3 from '../assets/house3.jpg'
 import house4 from '../assets/house4.jpg'
 import logo from '../assets/logo.png'
+import Footer from "./Footer";
 
 function Home(){
     return(
@@ -79,13 +80,19 @@ function Home(){
                     <div className="btn-props">
                         <button className="button-84"><Link to='/properties'>View All Properties</Link></button> 
                     </div>  
-                    <div className="home-last-section">
-                        <h4>Ready to Find Your Dream Home?</h4>
-                        <p>Our expert agents are here to help you every step of the way</p>
-
-                    </div>            
+                              
 
             </div>
+            <div className="home-last-section">
+                        <h4>Ready to Find Your Dream Home?</h4>
+                        <p>Our expert agents are here to help you every step of the way</p>
+                          <button className="button-84">
+                                <Link to='/contact' style={{color:'white', textDecoration:'none'}}>
+                                    Contact Us Today
+                                </Link>
+                         </button>
+
+            </div>  
     
         </div>
     )
