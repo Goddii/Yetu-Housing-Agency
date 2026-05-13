@@ -256,4 +256,66 @@
   /* navbar */
 .menu-section a {
   font-size: 16px;
+.agent-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap:25px;
+  padding:30px;
+}
+.agent-card{
+  background-color:#d0d2f1;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  padding:20px;
+   margin:30px;
+
+}
+
+.agent-card h3{
+  color:#333;
+  margin-bottom:10px;
+}
+.agent-card p{
+  color:#555;
+  margin-bottom:8px;
+  line-height:1.5;
+}
+.agent-card strong{
+  color:#111;
+}
+.listings-title{
+  margin-top:20px;
+  color:#0f172a;
+}
+.listings-container{
+ display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:10px;
+}
+.listing-card{
+  background:#fafafa;
+  border-radius:10px;
+   width:500px;
+  overflow:hidden;
+  border:1px solid #ddd;
+ transition:0.2s ease;
+ margin-bottom:20px;
+ margin-top:10px;
+}
+.listing-card:hover{
+  background:#d3ceef;
+}
+.listing-img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.listing-card h4{
+  margin:10px;
+  color:#333;
+}
+.price{
+  margin:10px;
+  color:#555;
 }
