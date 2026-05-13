@@ -1,6 +1,6 @@
 /* HERO */ 
 .contact-hero { 
-  background: #1d4dff; 
+  background: oklch(60.129% 0.20181 259.183); 
   color: white; 
   padding: 60px 80px; 
   text-align: center;
@@ -21,6 +21,8 @@
   padding: 50px 80px; 
   background: #f0f0f0; /* Dark site background matching the picture */
   box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+
 } 
 
 /* LEFT SIDE WHITE CARD */ 
@@ -30,6 +32,7 @@
   padding: 40px; 
   border-radius: 10px; 
   box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4); /* Subtle shadow for better card visibility on dark background */
 } 
 .contact-form-box h2 { 
   margin-top: 0;
@@ -48,6 +51,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  
 }
 
 .form-group label {
@@ -107,6 +111,8 @@
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+
 }
 
 .info-card {
