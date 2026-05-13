@@ -31,9 +31,6 @@
   display: flex;
   flex-direction: column;
   
-
-
-
 }
 
 .home-inside-container {
@@ -249,4 +246,9 @@
   align-items: center;
   color: white;
   font-size: 18px;
+}
+
+  /* navbar */
+.menu-section a {
+  font-size: 16px;
 }

@@ -77,7 +77,7 @@ function Home(){
 
                     </div> 
                     <div className="btn-props">
-                        <button className="button-84">View All Properties</button> 
+                        <button className="button-84"><Link to='/properties'>View All Properties</Link></button> 
                     </div>  
                     <div className="home-last-section">
                         <h4>Ready to Find Your Dream Home?</h4>
