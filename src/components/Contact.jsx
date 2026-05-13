@@ -16,122 +16,124 @@
                     </p>
                 </section>
 
-            {/*MAIN CONTACT SECTION*/}
-            <section className="contact-container">
+                {/*MAIN CONTACT SECTION*/}
+                <section className="contact-container">
 
-                {/*LEFT SIDE FORM*/}
-                <div className="contact-form-box">
-                    <h2>Send us a Message</h2>
+                    {/*LEFT SIDE FORM*/}
+                    <div className="contact-form-box">
+                        <h2>Send us a Message</h2>
 
-                    <form>
-                        <div className="form-row">
+                        <form>
+                            <div className="form-row">
+                                <div className="form-group">
+                                    <label>Full Name</label>
+
+                                    <input
+                                    type="text"
+                                    placeholder="John Doe"
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label>Email Address</label>
+
+                                    <input
+                                    type="email"
+                                    placeholder="john@example.com"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="form-row">
+                                <div className="form-group">
+                                    <label>Subject</label>
+
+                                    <select>
+                                        <option>General Inquiry</option>
+                                        <option>Buy Property</option>
+                                        <option>Sell Property</option>
+                                    </select>
+                                </div>
+                            </div>
+
                             <div className="form-group">
-                                <label>Full Name</label>
-
-                                <input
-                                type="text"
-                                placeholder="John Doe"
-                                />
+                                <label>Message</label>
+                                <textarea
+                                rows="7"
+                                placeholder="Tell us about your real estate needs..."></textarea>
                             </div>
 
-                            <div>
-                                <label>Email Address</label>
+                            <button className="send-btn">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
 
-                                <input
-                                type="email"
-                                placeholder="john@example.com"
-                                />
-                            </div>
-                        </div>
+                    {/*RIGHT SIDE FORM*/}
+            <div className="contact-info">
 
-                        <div className="form-row">
-                            <div className="form-group">
-                                <label>Subject</label>
+            <div className="info-card">
 
-                                <select>
-                                    <option>Genersl Inquiry</option>
-                                    <option>Buy Property</option>
-                                    <option>Sell property</option>
-                                </select>
-                            </div>
-                        </div>
+                <h2>Contact Information</h2>
 
-                        <div>
-                            <label>Message</label>
-                            <textarea
-                            rows="7"
-                            placeholder="Tell us about your real estate needs..."></textarea>
-                        </div>
+                <div className="info-item">
+                <FaMapMarkerAlt className="icon" />
 
-                        <button className="send-btn">
-                            Send Message
-                        </button>
-                    </form>
+                <div>
+                    <h4>Office Address</h4>
+                    <p>123 Real Estate Ave</p>
+                    <p>New York, NY 10001</p>
+                </div>
                 </div>
 
-                {/*RIGHT SIDE FORM*/}
-         <div className="contact-info">
+                <div className="info-item">
+                <FaPhoneAlt className="icon" />
 
-          <div className="info-card">
+                <div>
+                    <h4>Phone</h4>
+                    <p>(555) 123-4567</p>
+                </div>
+                </div>
 
-            <h2>Contact Information</h2>
+                <div className="info-item">
+                <FaEnvelope className="icon" />
 
-            <div className="info-item">
-              <FaMapMarkerAlt className="icon" />
+                <div>
+                    <h4>Email</h4>
+                    <p>info@luxeestates.com</p>
+                </div>
+                </div>
 
-              <div>
-                <h4>Office Address</h4>
-                <p>123 Real Estate Ave</p>
-                <p>New York, NY 10001</p>
-              </div>
+                <div className="info-item">
+                <FaClock className="icon" />
+
+                <div>
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                </div>
+
             </div>
 
-            <div className="info-item">
-              <FaPhoneAlt className="icon" />
+            {/* BLUE BOX */}
+            <div className="help-box">
+                <h3>Need Immediate Assistance?</h3>
 
-              <div>
-                <h4>Phone</h4>
-                <p>(555) 123-4567</p>
-              </div>
+                <p>
+                Our team is ready to help you with all your
+                real estate needs.
+                </p>
             </div>
 
-            <div className="info-item">
-              <FaEnvelope className="icon" />
-
-              <div>
-                <h4>Email</h4>
-                <p>info@luxeestates.com</p>
-              </div>
             </div>
 
-            <div className="info-item">
-              <FaClock className="icon" />
+                </section>
+                < Footer/>
 
-              <div>
-                <h4>Business Hours</h4>
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
             </div>
+        );
+    }
 
-          </div>
-
-          {/* BLUE BOX */}
-          <div className="help-box">
-            <h3>Need Immediate Assistance?</h3>
-
-            <p>
-              Our team is ready to help you with all your
-              real estate needs.
-            </p>
-          </div>
-
-        </div>
-
-            </section>
-        </div>
-    );
-}
-
-export default Contact;
+    export default Contact;
