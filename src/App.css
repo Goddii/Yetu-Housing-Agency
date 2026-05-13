@@ -69,17 +69,17 @@
 
 .slide-in-title {
   opacity: 0;
-  animation: slideInFromLeft 1s ease-out forwards
+  animation: fadeSlideUp 1.2s cubic-bezier(0.2,0.8,0.2, 1) forwards;
 }
 
-@keyframes slideInFromLeft {
+@keyframes fadeSlideUp {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
