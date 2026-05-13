@@ -14,7 +14,7 @@ function Footer(){
 
             {/*LOGO*/}
             <div className="footer-box">
-                <h2>LuxeEstates</h2>
+                <h2>Yetu Housing</h2>
                 <p>
                     Your trusted partner in finding the perfect home.
                     Excellence in real estate since 2010.
