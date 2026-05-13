@@ -19,11 +19,6 @@
   
 }
 
-.menu-section a {
-  text-decoration: none;
-  color: black;
-}
-
 
 
 .home-section {
@@ -57,24 +52,29 @@
 .paragraph-container h1{
   font-size: 80px;
   font-weight: 500;
+  text-shadow: 2px 2px 0px #000000;
+  color: black;  
 }
 .paragraph-container p{
   font-size: 30px;
+  color: black;
+  font-weight: 200;
+  
 }
 
 .slide-in-title {
   opacity: 0;
-  animation: slideInFromLeft 1s ease-out forwards
+  animation: fadeSlideUp 1.2s cubic-bezier(0.2,0.8,0.2, 1) forwards;
 }
 
-@keyframes slideInFromLeft {
+@keyframes fadeSlideUp {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -94,7 +94,7 @@
 .home-featured-section {
 
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -142,15 +142,16 @@
 
 .home-card {
   width: 100%;
-  height: 400px;
+  height: auto;
   display: flex;
   flex-direction: row;
   padding: 5px;
+  box-sizing: border-box;
 }
 
 .image-card {
-  width: 60%;
-  height: 100%;
+  width: 33%;
+  height: 300px;
   margin-top: 20px;
   padding: 5px;
   overflow: hidden;
@@ -245,23 +246,41 @@
 .home-last-section {
   background-color: #007bff;
   width: 100%;
-  height: 500px;
+  height: auto;
+  padding: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   font-size: 18px;
+  margin-top: 20px;
+  box-sizing: border-box;
 }
 
   /* navbar */
 .menu-section a {
   font-size: 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.menu-section a:hover {
+  color: #007bff
+}
+
+
+
+
 .agent-container{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap:25px;
   padding:30px;
 }
+
 .agent-card{
   background-color:#d0d2f1;
   border-radius:10px;
@@ -315,7 +334,7 @@
   margin:10px;
   color:#333;
 }
-.price{
+.price {
   margin:10px;
   color:#555;
 }
