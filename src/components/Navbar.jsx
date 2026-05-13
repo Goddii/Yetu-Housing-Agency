@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { NavLink } from "react-router-dom";
+import logo from '../assets/icons8-building-64.png'
 
 
 
@@ -9,6 +10,9 @@ function Navbar() {
         <nav className="nav-section">
 
             <div className="logo-section">
+                <div className="logo">
+                    <img src={logo} alt="logo" /> 
+                </div>
                 <h1>Yetu Housing Agency</h1>
             </div>
 

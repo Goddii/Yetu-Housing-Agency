@@ -3,6 +3,14 @@
   justify-content: space-between;
   gap: 40px;
 }
+.logo-section {
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+}
+
 .menu-section{
   display: flex;
   gap: 40px;

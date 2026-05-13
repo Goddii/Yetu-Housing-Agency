@@ -3,6 +3,7 @@ import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 import houseimg from '../assets/house2.jpg'
 import house3 from '../assets/house3.jpg'
 import house4 from '../assets/house4.jpg'
+import logo from '../assets/logo.png'
 
 function Home(){
     return(
