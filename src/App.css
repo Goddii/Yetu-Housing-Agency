@@ -185,6 +185,11 @@
   margin-top: 40px;
 }
 
+.btn-props a {
+  text-decoration: none;
+  color: black;
+}
+
 
 .button-84 {
   align-items: center;
