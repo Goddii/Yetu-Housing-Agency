@@ -109,13 +109,7 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
+/*contact-page*/
 
 /* HERO */
 
@@ -298,4 +292,42 @@ code {
   }
 }
 
+/*footer*/
+.footer {
+  background: #050b2c;
+  color: white;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 40px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  margin-bottom: 20px;
+}
+
+.footer-box p,
+.footer-box li {
+  margin-bottom: 10px;
+  color: #cfcfcf;
+}
+
+.footer-box ul {
+  list-style: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
 
