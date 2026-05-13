@@ -1,4 +1,4 @@
-//import './Properties.css';
+import './Properties.css';
 function Properties() {
     return(
         <>
@@ -13,7 +13,7 @@ function Properties() {
                 <label htmlFor="location">Location:</label>
                 <input type="text" id="location" name="location" placeholder="Enter location" />
                 <label htmlFor="price">Price Range:</label> 
-                <select type="text" id="price" name="price" placeholder="All prices" >
+                <select type="text"  id="price" name="price" placeholder="All prices" >
                     <option value="">All prices</option>
                     <option value="0-100000">Under $100,000</option>
                     <option value="100000-500000">$100,000 - $500,000</option>
