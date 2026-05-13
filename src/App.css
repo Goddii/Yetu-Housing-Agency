@@ -81,6 +81,11 @@
   }
 }
 
+.explore-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: semibold;
+}
 
 .home-mid-section {
 

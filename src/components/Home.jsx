@@ -14,7 +14,7 @@ function Home(){
                     <p>Your trusted partner in finding the perfect home.</p>
                 </div> 
                 <div>
-                <Link to='/properties' className="explore-btn">Explore Properties</Link>
+                <button className="button-84"><Link to='/properties' className="explore-btn">Explore Properties</Link></button>
                 </div>
             </div>
             <div className="home-mid-section">
