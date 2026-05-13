@@ -1,0 +1,18 @@
+.properties-container {
+
+}
+.properties-header {
+    text-align:left;
+    margin-bottom: 20px;
+    background-color:oklch(60.129% 0.20181 259.183);
+    padding: 40px;
+    border-radius: 5px;
+    color: white;
+}
+.search-bar{
+    text-align:left;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
