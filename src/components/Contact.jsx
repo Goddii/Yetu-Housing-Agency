@@ -1,19 +1,20 @@
-import {
-    FaMarketAlt,
-    FaPhoneAlt,
-    FaEnvelop,
-    FaClock,
-} from "react-icons/fa";
-function Contact() {
-    return(
-        <div>
-            {/*HERO SECTION*/}
-            <section className="contact-hero">
-                <h1>Contact Us</h1>
-                <P>
-                    We're here to help you find your dream home
-                </P>
-            </section>
+    import {
+        FaMapMarkerAlt,
+        FaPhoneAlt,
+        FaEnvelope,
+        FaClock,
+    } from "react-icons/fa";
+    import Footer from "./Footer";
+    function Contact() {
+        return(
+            <div>
+                {/*HERO SECTION*/}
+                <section className="contact-hero">
+                    <h1>Contact Us</h1>
+                    <p>
+                        We're here to help you find your dream home
+                    </p>
+                </section>
 
             {/*MAIN CONTACT SECTION*/}
             <section className="contact-container">

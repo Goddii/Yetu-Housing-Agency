@@ -14,6 +14,7 @@ function Footer(){
 
             {/*LOGO*/}
             <div className="footer-box">
+                <FaBuilding className="footer-logo-icon" />
                 <h2>LuxeEstates</h2>
                 <p>
                     Your trusted partner in finding the perfect home.
