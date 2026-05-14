@@ -68,6 +68,17 @@ function Home(){
                         <h3>Featured Houses</h3>
                     </div>               
                     <div className="home-card">
+                        {loading && <p>Loading properties...</p>}
+
+                        {featured.map(property => (
+                            <div className="image-card" key={property.id}>
+                                <img src={property.image} alt={property.title} />
+                                <div className="image-section">
+                                    <p><i className="fas fa-location-dot"></i>{property.location}</p>
+                                    <p>{property.title}</p>
+                                </div>
+                            </div>
+                        ))}
                     
                         
   
