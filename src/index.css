@@ -226,6 +226,13 @@
 
 .footer-box ul {
   list-style: none;
+  color: #cfcfcf;
+  padding: 0;
+}
+
+.footer-box ul li a {
+  color: #cfcfcf;
+  text-decoration: none;
 }
 
 .social-icons {
@@ -234,3 +241,5 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+

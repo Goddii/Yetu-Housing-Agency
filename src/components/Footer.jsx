@@ -4,6 +4,7 @@ import{
     FaTwitter,
     FaLinkedinIn,
 }from "react-icons/fa"
+import { Link } from "react-router-dom"
 
 function Footer(){
     return(
@@ -26,10 +27,10 @@ function Footer(){
                 <h3>Quick Links</h3>
 
                 <ul>
-                    <li>Home</li>
-                    <li>Properties</li>
-                    <li>Our Agents</li>
-                    <li>Contact Us</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/properties">Properties</Link></li>
+                    <li><Link to="/agent">Our Agents</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </div>
 
