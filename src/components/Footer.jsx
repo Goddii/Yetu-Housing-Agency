@@ -37,10 +37,10 @@ function Footer(){
             <div className="footer-box"> 
                 <h3>Contact Info</h3>
 
-                <p>123 Real Estate Ave</p>
-                <p>New York, NY 10001</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@luxeestates.com</p>
+                <p>123 Real Estate KE</p>
+                <p>Nairobi, KE 254</p>
+                <p>Phone: (+254) 123-456708</p>
+                <p>Email: info@yetuhousing.co.ke</p>
             </div>
 
             {/*SOCIALS*/}
