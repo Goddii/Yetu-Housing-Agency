@@ -2,6 +2,12 @@
     max-width: 1200px;
 
 }
+.properties-section {
+   @media (max-width: 900px) {
+    .properties-listing {
+      grid-template-columns: 1fr;
+    }
+}
 .properties-header h1 {
     font-size: 2em;
     font-weight: bold;
@@ -48,13 +54,17 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     
 }
+}
 .properties-listing {
      display: grid;
     grid-template-columns:repeat(3, 1fr);
     gap: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-}
+    @media  (max-width: 900px) {
+        
+    }
+
 .property-card {
     border-radius: 5px;
     padding: 20px;
@@ -78,4 +88,5 @@ h5{
     font-size: 1.5em;
     font-weight: bold;
     color: oklch(60.129% 0.20181 259.183);
+}
 }
