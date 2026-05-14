@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Properties.css';
+import PropertyList from './PropertyList';
+import { Link } from 'react-router-dom';
 function Properties() {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -19,6 +21,7 @@ function Properties() {
 
     return(
         <>
+        
         <div className="properties-section">
             <div className="properties-header">
             <h1>Properties Listing</h1>
@@ -48,12 +51,14 @@ function Properties() {
         </div>
         <div className="properties-listing">
             {properties.map(property => (
-                <div className="property-card" key={property.id}>
-                    <img src={property.image} alt={property.name} />
-                    <h3>{property.name}</h3>
-                    <h5> ${property.price.toLocaleString()}</h5>
-                    <p>{property.bedrooms} beds, {property.bathrooms} baths - {property.sqft} sqft</p>
-                </div>
+               <Link to={`/properties/${property.id}`} key={property.id}>
+                    <div className="property-card" key={property.id}>
+                        <img src={property.image} alt={property.name} />
+                        <h3>{property.name}</h3>
+                        <h5> ${property.price.toLocaleString()}</h5>
+                        <p>{property.bedrooms} beds, {property.bathrooms} baths - {property.sqft} sqft</p>
+                    </div>
+                </Link>
             ))}
         </div>
      
