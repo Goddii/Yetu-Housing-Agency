@@ -5,6 +5,15 @@
         FaClock,
     } from "react-icons/fa";
     import Footer from "./Footer";
+    import {useState} from "react";
+
+    const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  subject: "General Inquiry",
+  message: ""
+});
+
     function Contact() {
         return(
             <div>
