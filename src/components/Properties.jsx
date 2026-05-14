@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 function Properties() {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [filters, setFilters] = useState({
+        location: '',
+        price: '',
+        type: ''
+    });
 
     useEffect(() => {
         fetch('http://localhost:3001/properties')
@@ -15,6 +20,29 @@ function Properties() {
             });
     }, []);
 
+    function handleFilterChnge(e) {
+        setFilters({...filters, [e.target.name]: e.target.value})
+    }
+    
+    const filteredProperty= properties.filter(property => {
+        const locationMatch = property.location.toLowerCase().includes(filters.location.toLowerCase())
+
+        let priceMatch = true
+        if (filters.price === '0-100000'){
+            priceMatch = property.price < 100000
+        } else if (filters.price === '100000-500000 ') {
+            priceMatch = property.price >= 100000 && property.price <= 500000
+        } else if (filters.price === '500000 +') {
+            priceMatch = property.price > 500000
+        }
+
+        const typeMatch = filters.type === '' || property.type === filters.type
+
+        return locationMatch && priceMatch && typeMatch
+
+
+    })
+    
     if (loading) {
         return <div>Loading properties...</div>;
     }
@@ -31,16 +59,16 @@ function Properties() {
                <h2>Filters</h2>
                <div className="search-inputs">
                 <label htmlFor="location">Location:</label>
-                <input type="text" id="location" name="location" placeholder="Enter location" />
+                <input type="text" id="location" name="location" value={filters.location} placeholder="Enter location" onChange={handleFilterChnge} />
                 <label htmlFor="price">Price Range:</label> 
-                <select type="text"  id="price" name="price" placeholder="All prices" >
+                <select type="text"  id="price" name="price" value={filters.price} placeholder="All prices" onChange={handleFilterChnge}>
                     <option value="">All prices</option>
                     <option value="0-100000">Under $100,000</option>
                     <option value="100000-500000">$100,000 - $500,000</option>
                     <option value="500000+">$500,000+</option>
                 </select>
                 <label htmlFor="property-type">Property Type:</label>
-                <select id="property-type" name="property-type" placeholder="All Types">
+                <select id="property-type" name="property-type" value={filters.type} placeholder="All Types" onChange={handleFilterChnge}>
                     <option value="">All Types</option>
                     <option value="house">House</option>
                     <option value="apartment">Apartment</option>
@@ -50,11 +78,21 @@ function Properties() {
                 </div>
         </div>
         <div className="properties-listing">
-            {properties.map(property => (
+
+            {loading && <p>Loading properties...</p>}
+
+            {!loading && filteredProperty.length  === 0 && (
+                <p style = {{padding:'10px'}}>No properties match your search</p>
+            )}
+
+
+
+            {filteredProperty.map(property => (
                <Link to={`/properties/${property.id}`} key={property.id}>
                     <div className="property-card" key={property.id}>
                         <img src={property.image} alt={property.name} />
                         <h3>{property.name}</h3>
+                        <p>{property.location}</p>
                         <h5> ${property.price.toLocaleString()}</h5>
                         <p>{property.bedrooms} beds, {property.bathrooms} baths - {property.sqft} sqft</p>
                     </div>
