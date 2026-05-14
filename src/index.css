@@ -226,6 +226,13 @@
 
 .footer-box ul {
   list-style: none;
+  color: #cfcfcf;
+  padding: 0;
+}
+
+.footer-box ul li a {
+  color: #cfcfcf;
+  text-decoration: none;
 }
 
 .social-icons {
@@ -233,4 +240,13 @@
   gap: 15px;
   font-size: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  
 }

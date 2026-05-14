@@ -1,12 +1,32 @@
 
 import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
-import houseimg from '../assets/house2.jpg'
-import house3 from '../assets/house3.jpg'
-import house4 from '../assets/house4.jpg'
 import logo from '../assets/logo.png'
 import Footer from "./Footer";
+import { useEffect, useState } from "react";
 
 function Home(){
+
+    const [featured, setFeatured] = useState([])
+    const [loading, setLoading] = useState(true)
+
+
+    useEffect(() => {
+        fetch('http://localhost:3001/properties?featured=true')
+        .then(res => res.json())
+        .then(data => {
+            setFeatured(data)
+            setLoading(false)
+
+        })
+        .catch(err => {
+            console.error('Error: ', err)
+            setLoading(false)
+        })
+    },[])
+
+
+
+
     return(
         <div className="home-section">
             <div className="home-inside-container">
@@ -48,32 +68,19 @@ function Home(){
                         <h3>Featured Houses</h3>
                     </div>               
                     <div className="home-card">
+                        {loading && <p>Loading properties...</p>}
+
+                        {featured.map(property => (
+                            <div className="image-card" key={property.id}>
+                                <img src={property.image} alt={property.title} />
+                                <div className="image-section">
+                                    <p><i className="fas fa-location-dot"></i>{property.location}</p>
+                                    <p>{property.title}</p>
+                                </div>
+                            </div>
+                        ))}
                     
-                        <div className="image-card">
-                            <img src={houseimg} alt="a beautiful house" />
-                            <div className="image-section">
-                                <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
-                                <p>Unique house</p>
-
-                            </div>
-
-                        </div>
-                        <div className="image-card">
-                            <img src={house3} alt="a beautiful villa" />
-                            <div className="image-section">
-                                <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
-                                <p>Cool house</p>
-                            </div>
-                        </div>
-
-                        <div className="image-card">
-                            <img src={house4} alt="a beautiful condo" />
-                            <div className="image-section">
-                            <p><i className="fas fa-location-dot"></i>Thika road, Kiambu</p>
-                            <p>Big house</p>
-                            </div>
-
-                        </div>
+                        
   
 
                     </div> 
