@@ -89,7 +89,7 @@
 /* ACTION SUBMIT BUTTON */
 .send-btn { 
   width: 100%; 
-  background: #1d4dff; 
+  background: oklch(60.129% 0.20181 259.183);
   color: white; 
   border: none; 
   padding: 18px; 
@@ -158,7 +158,7 @@
 
 /* LOWER BLUE PROMO BOX */
 .help-box {
-  background: #1d4dff; 
+  background: oklch(60.129% 0.20181 259.183);
   color: white;
   padding: 40px 30px;
   border-radius: 10px;
