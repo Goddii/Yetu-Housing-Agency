@@ -4,6 +4,10 @@ import logo from '../assets/logo.png'
 import Footer from "./Footer";
 
 function Home(){
+
+
+
+
     return(
         <div className="home-section">
             <div className="home-inside-container">
@@ -46,31 +50,7 @@ function Home(){
                     </div>               
                     <div className="home-card">
                     
-                        <div className="image-card">
-                            <img src={houseimg} alt="a beautiful house" />
-                            <div className="image-section">
-                                <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
-                                <p>Unique house</p>
-
-                            </div>
-
-                        </div>
-                        <div className="image-card">
-                            <img src={house3} alt="a beautiful villa" />
-                            <div className="image-section">
-                                <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
-                                <p>Cool house</p>
-                            </div>
-                        </div>
-
-                        <div className="image-card">
-                            <img src={house4} alt="a beautiful condo" />
-                            <div className="image-section">
-                            <p><i className="fas fa-location-dot"></i>Thika road, Kiambu</p>
-                            <p>Big house</p>
-                            </div>
-
-                        </div>
+                        
   
 
                     </div> 
