@@ -13,6 +13,29 @@
   subject: "General Inquiry",
   message: ""
 });
+// Handle form input changes
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+
+// Handle form submission
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const newMessage = {
+    Id: Date.now(),
+    ...formData
+  };
+
+  console.log("MESSAGE JSON:", newMessage);
+    // Reset form after submission
+    setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
+};
+
+
 
     function Contact() {
         return(
@@ -40,6 +63,9 @@
                                     <input
                                     type="text"
                                     placeholder="John Doe"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    name="name"
                                     />
                                 </div>
 
