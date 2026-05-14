@@ -16,14 +16,15 @@ function App() {
       <Navbar />
  
       <Routes>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/properties' element={<Properties/>}/>
         <Route path='/agent' element={<Agent/>}/>
         <Route path='/contact' element={<Contact/>}/>
+
           
         
       </Routes>
-      
+      <Footer />
      
     </BrowserRouter>
     
