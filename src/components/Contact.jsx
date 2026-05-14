@@ -25,13 +25,27 @@ const handleChange = (e) => {
 // Handle form submission
 const handleSubmit = (e) => {
   e.preventDefault();
+  fetch("http://localhost:3001/contacts",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ ...formData, date: new Date().toLocaleDateString() })
+  })
+    .then(response => response.json())
+    .then(() => {
+      alert("Message sent successfully!");
+    })
+    .catch((error) => {
+      console.error("Error sending message:", error);
+    });
 
   const newMessage = {
     Id: Date.now(),
     ...formData
   };
 
-  console.log("MESSAGE JSON:", newMessage);
+  console.log("New Message:", newMessage);
     // Reset form after submission
     setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
 };
@@ -88,10 +102,10 @@ return (
                                         value={formData.subject}
                                         onChange={handleChange}
                                         name="subject"
-                            >
-                                        <option>General Inquiry</option>
-                                        <option>Buy Property</option>
-                                        <option>Sell Property</option>
+                                    >
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Buy Property">Buy Property</option>
+                                        <option value="Sell Property">Sell Property</option>
                                     </select>
                                 </div>
                             </div>
@@ -107,7 +121,7 @@ return (
                                 ></textarea>
                             </div>
 
-                            <button className="send-btn" type="submit   ">
+                            <button className="send-btn" type="submit">
                                 Send Message
                             </button>
                         </form>
