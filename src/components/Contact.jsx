@@ -74,10 +74,12 @@ return (
 
                                     <input
                                     type="text"
-                                    placeholder="John Doe"
+                                    placeholder="Malick Ahmed"
                                     value={formData.name}
                                     onChange={handleChange}
                                     name="name"
+                                    required
+                                    minLength="2"
                                     />
                                 </div>
 
@@ -90,6 +92,7 @@ return (
                                     value={formData.email}
                                     onChange={handleChange}
                                     name="email"
+                                    required
                                     />
                                 </div>
                             </div>
@@ -118,6 +121,8 @@ return (
                                 placeholder="Tell us about your real estate needs..."
                                 value={formData.message}
                                 onChange={handleChange}
+                                required
+                                minLength="10"
                                 ></textarea>
                             </div>
 
