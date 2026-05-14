@@ -21,9 +21,8 @@ function Home(){
         .catch(err => {
             console.error('Error: ', err)
             setLoading(false)
-        })
+        }) 
     },[])
-
 
 
 
@@ -81,8 +80,6 @@ function Home(){
                         ))}
                     
                         
-  
-
                     </div> 
                     <div className="btn-props">
                         <button className="button-84"><Link to='/properties'>View All Properties</Link></button> 
