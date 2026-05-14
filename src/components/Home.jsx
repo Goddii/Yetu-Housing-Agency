@@ -2,8 +2,27 @@
 import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 import logo from '../assets/logo.png'
 import Footer from "./Footer";
+import { useEffect, useState } from "react";
 
 function Home(){
+
+    const [featured, setFeatured] = useState([])
+    const [loading, setLoading] = useState(true)
+
+
+    useEffect(() => {
+        fetch('http://localhost:3001/properties?featured=true')
+        .then(res => res.json())
+        .then(data => {
+            setFeatured(data)
+            setLoading(false)
+
+        })
+        .catch(err => {
+            console.error('Error: ', err)
+            setLoading(false)
+        })
+    },[])
 
 
 
