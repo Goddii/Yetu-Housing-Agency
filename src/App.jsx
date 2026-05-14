@@ -6,6 +6,7 @@ import Properties from './components/Properties'
 import Agent from './components/Agent'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import {Routes, Route} from "react-router-dom"
 
 
 function App() {

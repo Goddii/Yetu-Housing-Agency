@@ -97,6 +97,7 @@ return (
                                     name="name"
                                     required
                                     minLength="2"
+                                    autoComplete="off"
                                     />
                                 </div>
 
@@ -110,9 +111,8 @@ return (
                                     onChange={handleChange}
                                     name="email"
                                     required
-                                    
-                                    title="Please enter your email in lowercase letters only (e.g., john@example.com)." // 👈 Message shown to user
-                                    />
+                                    autoComplete="off"
+                                    />  
                                 </div>
                             </div>
 
