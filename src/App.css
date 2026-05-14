@@ -275,37 +275,46 @@
 
 
 .agent-container{
+  margin:0;
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap:25px;
-  padding:30px;
+  padding:15px;
 }
 
 .agent-card{
-  background-color:#d0d2f1;
+  background-color:oklch(55.449% 0.20582 259.65);
   border-radius:10px;
   box-shadow:0 4px 15px rgba(0,0,0,0.1);
   padding:20px;
-   margin:30px;
+   margin:5px;
 
+}
+.agent-name{
+  font-size:30px;
+  font-weight:600;
 }
 
 .agent-card h3{
-  color:#333;
+  color:#f4f4f4;
   margin-bottom:10px;
+  
 }
 .agent-card p{
-  color:#555;
+  color:#f8f4f4;
+  font-size:20px;
   margin-bottom:8px;
   line-height:1.5;
 }
 .agent-card strong{
   color:#111;
 }
+
 .listings-title{
   margin-top:20px;
   color:#0f172a;
 }
+
 .listings-container{
  display:flex;
   flex-wrap:wrap;
@@ -318,23 +327,23 @@
    width:500px;
   overflow:hidden;
   border:1px solid #ddd;
- transition:0.2s ease;
- margin-bottom:20px;
- margin-top:10px;
-}
-.listing-card:hover{
-  background:#d3ceef;
+  margin-bottom:20px;
+  padding:10px;
+  text-align:center;
+
 }
 .listing-img{
   width:100%;
-  height:180px;
+  height:300px;
   object-fit:cover;
 }
 .listing-card h4{
   margin:10px;
-  color:#333;
+  color:#141414;
+  font-size:20px;
 }
-.price {
+.listing-card p{
   margin:10px;
-  color:#555;
+  color:#141414;
+  font-size:18px;
 }
