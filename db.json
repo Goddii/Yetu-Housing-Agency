@@ -1,7 +1,7 @@
 {
   "properties": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Modern Family Home",
       "price": 2850000,
       "location": "Kilimani, Nairobi",
@@ -13,7 +13,7 @@
       "featured": true
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Contemporary Estate",
       "price": 1950000,
       "location": "Kileleshwa, Nairobi",
@@ -25,7 +25,7 @@
       "featured": true
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Elegant Modern Residence",
       "price": 3200000,
       "location": "Westlands, Nairobi",
@@ -37,7 +37,7 @@
       "featured": true
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Waterfront Paradise",
       "price": 4100000,
       "location": "Lavington, Nairobi",
@@ -49,7 +49,7 @@
       "featured": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Sophisticated Modern Home",
       "price": 2650000,
       "location": "Runda, Nairobi",
@@ -61,7 +61,7 @@
       "featured": false
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Luxury Pool Estate",
       "price": 3750000,
       "location": "Thika Road, Kiambu",
@@ -73,7 +73,7 @@
       "featured": false
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "City View Apartment",
       "price": 850000,
       "location": "Upper Hill, Nairobi",
@@ -85,7 +85,7 @@
       "featured": false
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Garden Condo",
       "price": 620000,
       "location": "South C, Nairobi",
@@ -99,7 +99,7 @@
   ],
   "agents": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Ilhan Ahamed",
       "role": "Property Manager",
       "email": "ilhan.ahamed@yetuhousing.co.ke",
@@ -119,7 +119,7 @@
                 }]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Kevin Maina",
       "role": "Sales Manager",
       "email": "kevin.maina@yetuhousing.co.ke",
@@ -139,7 +139,7 @@
             }]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Amina Oduya",
       "role": "Leasing Consultant",
       "email": "amina.oduya@yetuhousing.co.ke",
@@ -159,5 +159,95 @@
                 }]
     }
   ],
-  "contacts": []
+  "contacts": [
+    {
+      "name": "DAUDI KOMBE KAZUNGU",
+      "email": "onlyme@gmail.com",
+      "subject": "Buy Property",
+      "message": "malindi watamu area",
+      "date": "5/14/2026",
+      "id": "IHhYjn2O9Uo"
+    },
+    {
+      "name": "Kasichana Omar",
+      "email": "kas@gmail.com",
+      "subject": "Buy Property",
+      "message": "near nairobi",
+      "date": "5/14/2026",
+      "id": "HzP69jxcBQ8"
+    },
+    {
+      "name": "mwanahamisi Juma",
+      "email": "mwana@gmail.com",
+      "subject": "Sell Property",
+      "message": "coastal of kilifi two bedroom",
+      "date": "5/14/2026",
+      "id": "QMRWUGJ3C6c"
+    },
+    {
+      "name": "Baraka Amos",
+      "email": "AMOS@GMAIL.COM",
+      "subject": "General Inquiry",
+      "message": "nEAR MSA",
+      "date": "5/14/2026",
+      "id": "lHG6AIbCIAM"
+    },
+    {
+      "name": "KACHE CHARO",
+      "email": "daudikombe77@gmail.com",
+      "subject": "Sell Property",
+      "message": "near newyork",
+      "date": "5/14/2026",
+      "id": "mjzgsgWsEAc"
+    },
+    {
+      "name": "DAUDI KOMBE KAZUNGU",
+      "email": "Kache@gmail.Com",
+      "subject": "Buy Property",
+      "message": "to book in mambrui",
+      "date": "5/14/2026",
+      "id": "xrvXQgCjFrA"
+    },
+    {
+      "name": "DAUDI KOMBE KAZUNGU",
+      "email": "Malik@gmail.com",
+      "subject": "Buy Property",
+      "message": "anywhere near london",
+      "date": "5/14/2026",
+      "id": "Pp7S2Mz85v0"
+    },
+    {
+      "name": "DAUDI KOMBE KAZUNGU",
+      "email": "Daudi@gmail.com",
+      "subject": "Buy Property",
+      "message": "aruond kawangware",
+      "date": "5/14/2026",
+      "id": "wbNJwKs4hHw"
+    },
+    {
+      "name": "DAUDI KOMBE KAZUNGU",
+      "email": "daudikombe77@gmail.com",
+      "subject": "General Inquiry",
+      "message": "ANYWHERE NEAR MSA",
+      "date": "5/14/2026",
+      "id": "68ao0cwvH6U"
+    },
+    {
+      "name": "amina kazungu",
+      "email": "amina@gmail.com",
+      "subject": "Buy Property",
+      "message": "I need a mansion",
+      "date": "5/14/2026",
+      "id": "7ACWhXK5xec"
+    },
+    {
+      "name": "Ngola Amimo",
+      "email": "ngola@gmail.com",
+      "subject": "Buy Property",
+      "message": "near kericho big 3 bedroom",
+      "date": "5/14/2026",
+      "id": "ij-nNsJdquc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
