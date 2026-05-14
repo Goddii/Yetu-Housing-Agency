@@ -5,8 +5,69 @@
         FaClock,
     } from "react-icons/fa";
     import Footer from "./Footer";
-    function Contact() {
-        return(
+    import {useState} from "react";
+
+    const Contact = () => {
+    const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  subject: "General Inquiry",
+  message: ""
+});
+
+// Handle form input changes
+const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  let formattedValue = value;
+
+  // Convert email to lowercase
+  if (name === "email") {
+    formattedValue = value.toLowerCase();
+  }
+
+  // Capitalize each word in full name
+  if (name === "name") {
+    formattedValue = value
+      .toLowerCase()
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  }
+
+  setFormData({
+    ...formData,
+    [name]: formattedValue,
+  });
+};
+
+// Handle form submission
+const handleSubmit = (e) => {
+  e.preventDefault();
+  fetch("http://localhost:3001/contacts",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ ...formData, date: new Date().toLocaleDateString() })
+  })
+    .then(response => response.json())
+    .then(() => {
+      alert("Message sent successfully!");
+    })
+    .catch((error) => {
+      console.error("Error sending message:", error);
+    });
+
+  const newMessage = {
+    Id: Date.now(),
+    ...formData
+  };
+
+  console.log("New Message:", newMessage);
+    // Reset form after submission
+    setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
+};
+
+return (
             <div>
                 {/*HERO SECTION*/}
                 <section className="contact-hero">
@@ -23,14 +84,20 @@
                     <div className="contact-form-box">
                         <h2>Send us a Message</h2>
 
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="form-row">
                                 <div className="form-group">
                                     <label>Full Name</label>
 
                                     <input
                                     type="text"
-                                    placeholder="John Doe"
+                                    placeholder="Malick Ahmed"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    name="name"
+                                    required
+                                    minLength="2"
+                                    autoComplete="off"
                                     />
                                 </div>
 
@@ -39,8 +106,13 @@
 
                                     <input
                                     type="email"
-                                    placeholder="john@example.com"
-                                    />
+                                    placeholder="malik@example.com"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    name="email"
+                                    required
+                                    autoComplete="off"
+                                    />  
                                 </div>
                             </div>
 
@@ -48,10 +120,14 @@
                                 <div className="form-group">
                                     <label>Subject</label>
 
-                                    <select>
-                                        <option>General Inquiry</option>
-                                        <option>Buy Property</option>
-                                        <option>Sell Property</option>
+                                    <select
+                                        value={formData.subject}
+                                        onChange={handleChange}
+                                        name="subject"
+                                    >
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Buy Property">Buy Property</option>
+                                        <option value="Sell Property">Sell Property</option>
                                     </select>
                                 </div>
                             </div>
@@ -60,10 +136,16 @@
                                 <label>Message</label>
                                 <textarea
                                 rows="7"
-                                placeholder="Tell us about your real estate needs..."></textarea>
+                                name="message"
+                                placeholder="Tell us about your real estate needs..."
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                minLength="10"
+                                ></textarea>
                             </div>
 
-                            <button className="send-btn">
+                            <button className="send-btn" type="submit">
                                 Send Message
                             </button>
                         </form>
@@ -134,6 +216,6 @@
 
             </div>
         );
-    }
+    };
 
     export default Contact;
