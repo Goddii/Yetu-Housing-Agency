@@ -14,11 +14,28 @@
   subject: "General Inquiry",
   message: ""
 });
+
 // Handle form input changes
 const handleChange = (e) => {
+  const { name, value } = e.target;
+
+  let formattedValue = value;
+
+  // Convert email to lowercase
+  if (name === "email") {
+    formattedValue = value.toLowerCase();
+  }
+
+  // Capitalize each word in full name
+  if (name === "name") {
+    formattedValue = value
+      .toLowerCase()
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  }
+
   setFormData({
     ...formData,
-    [e.target.name]: e.target.value
+    [name]: formattedValue,
   });
 };
 
@@ -88,11 +105,13 @@ return (
 
                                     <input
                                     type="email"
-                                    placeholder="john@example.com"
+                                    placeholder="malik@example.com"
                                     value={formData.email}
                                     onChange={handleChange}
                                     name="email"
                                     required
+                                    
+                                    title="Please enter your email in lowercase letters only (e.g., john@example.com)." // 👈 Message shown to user
                                     />
                                 </div>
                             </div>
@@ -199,4 +218,4 @@ return (
         );
     };
 
-    export default Contact; 
+    export default Contact;
