@@ -88,7 +88,7 @@ function Properties() {
 
 
             {filteredProperty.map(property => (
-               <Link to={`/properties/${property.id}`} key={property.id}>
+               <Link to={`/properties/${property.id}`} key={property.id} style={{textDecoration: 'none', color: 'inherit'}}>
                     <div className="property-card" key={property.id}>
                         <img src={property.image} alt={property.name} />
                         <h3>{property.name}</h3>
