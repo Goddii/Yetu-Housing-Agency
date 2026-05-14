@@ -7,6 +7,7 @@
     import Footer from "./Footer";
     import {useState} from "react";
 
+    const Contact = () => {
     const [formData, setFormData] = useState({
   name: "",
   email: "",
@@ -35,10 +36,7 @@ const handleSubmit = (e) => {
     setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
 };
 
-
-
-    function Contact() {
-        return(
+return (
             <div>
                 {/*HERO SECTION*/}
                 <section className="contact-hero">
@@ -55,7 +53,7 @@ const handleSubmit = (e) => {
                     <div className="contact-form-box">
                         <h2>Send us a Message</h2>
 
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="form-row">
                                 <div className="form-group">
                                     <label>Full Name</label>
@@ -75,6 +73,9 @@ const handleSubmit = (e) => {
                                     <input
                                     type="email"
                                     placeholder="john@example.com"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    name="email"
                                     />
                                 </div>
                             </div>
@@ -83,7 +84,11 @@ const handleSubmit = (e) => {
                                 <div className="form-group">
                                     <label>Subject</label>
 
-                                    <select>
+                                    <select
+                                        value={formData.subject}
+                                        onChange={handleChange}
+                                        name="subject"
+                            >
                                         <option>General Inquiry</option>
                                         <option>Buy Property</option>
                                         <option>Sell Property</option>
@@ -95,10 +100,14 @@ const handleSubmit = (e) => {
                                 <label>Message</label>
                                 <textarea
                                 rows="7"
-                                placeholder="Tell us about your real estate needs..."></textarea>
+                                name="message"
+                                placeholder="Tell us about your real estate needs..."
+                                value={formData.message}
+                                onChange={handleChange}
+                                ></textarea>
                             </div>
 
-                            <button className="send-btn">
+                            <button className="send-btn" type="submit   ">
                                 Send Message
                             </button>
                         </form>
@@ -169,6 +178,6 @@ const handleSubmit = (e) => {
 
             </div>
         );
-    }
+    };
 
-    export default Contact;
+    export default Contact; 
