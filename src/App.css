@@ -347,3 +347,142 @@
   color:#141414;
   font-size:18px;
 }
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .home-inside-container {
+    height: 60vh;
+  }
+
+  .paragraph-container h1 {
+    font-size: 44px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .paragraph-container p {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /* STATS CARDS ROW — wrap into 2x2 grid */
+  .home-mid-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card-one {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  /* FEATURED CARDS — stack vertically */
+  .home-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .image-card {
+    width: 90%;
+    height: auto;
+  }
+
+  /* NAVBAR */
+  .nav-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .menu-section {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  /* CTA SECTION */
+  .home-last-section {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* MOBILE — 480px and below */
+@media (max-width: 480px) {
+
+  /* HERO */
+  .home-inside-container {
+    height: 70vh;
+    justify-content: center;
+  }
+
+  .paragraph-container {
+    min-height: unset;
+    padding: 20px;
+  }
+
+  .paragraph-container h1 {
+    font-size: 30px;
+  }
+
+  .paragraph-container p {
+    font-size: 15px;
+  }
+
+  /* STATS CARDS — single column on very small screens */
+  .home-mid-section {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .card-one {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* FEATURED CARDS */
+  .image-card {
+    width: 100%;
+    height: auto;
+  }
+
+  /* NAVBAR */
+  .menu-section {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .logo-section h1 {
+    font-size: 18px;
+  }
+
+  /* BUTTONS */
+  .button-84 {
+    font-size: 15px;
+    padding: 0 20px;
+    height: 44px;
+  }
+
+  /* CTA */
+  .home-last-section {
+    padding: 30px 15px;
+    font-size: 14px;
+  }
+
+  .home-last-section h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
