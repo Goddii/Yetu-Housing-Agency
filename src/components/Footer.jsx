@@ -4,6 +4,7 @@ import{
     FaTwitter,
     FaLinkedinIn,
 }from "react-icons/fa"
+import { Link } from "react-router-dom"
 
 function Footer(){
     return(
@@ -26,10 +27,10 @@ function Footer(){
                 <h3>Quick Links</h3>
 
                 <ul>
-                    <li>Home</li>
-                    <li>Properties</li>
-                    <li>Our Agents</li>
-                    <li>Contact Us</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/properties">Properties</Link></li>
+                    <li><Link to="/agent">Our Agents</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </div>
 
@@ -37,10 +38,10 @@ function Footer(){
             <div className="footer-box"> 
                 <h3>Contact Info</h3>
 
-                <p>123 Real Estate Ave</p>
-                <p>New York, NY 10001</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@luxeestates.com</p>
+                <p>123 Real Estate KE</p>
+                <p>Nairobi, KE 254</p>
+                <p>Phone: (+254) 123-456708</p>
+                <p>Email: info@yetuhousing.co.ke</p>
             </div>
 
             {/*SOCIALS*/}
