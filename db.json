@@ -145,6 +145,30 @@
       "message": "malindi watamu area",
       "date": "5/14/2026",
       "id": "IHhYjn2O9Uo"
+    },
+    {
+      "name": "Kasichana Omar",
+      "email": "kas@gmail.com",
+      "subject": "Buy Property",
+      "message": "near nairobi",
+      "date": "5/14/2026",
+      "id": "HzP69jxcBQ8"
+    },
+    {
+      "name": "mwanahamisi Juma",
+      "email": "mwana@gmail.com",
+      "subject": "Sell Property",
+      "message": "coastal of kilifi two bedroom",
+      "date": "5/14/2026",
+      "id": "QMRWUGJ3C6c"
+    },
+    {
+      "name": "Baraka Amos",
+      "email": "AMOS@GMAIL.COM",
+      "subject": "General Inquiry",
+      "message": "nEAR MSA",
+      "date": "5/14/2026",
+      "id": "lHG6AIbCIAM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
