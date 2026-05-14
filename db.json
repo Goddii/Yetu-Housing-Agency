@@ -1,0 +1,130 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Modern Family Home",
+      "price": 2850000,
+      "location": "Kilimani, Nairobi",
+      "beds": 5,
+      "baths": 4,
+      "sqft": 4200,
+      "type": "house",
+      "image": "https://images.unsplash.com/photo-1706855203772-c249b75fe016?w=800",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Contemporary Estate",
+      "price": 1950000,
+      "location": "Kileleshwa, Nairobi",
+      "beds": 4,
+      "baths": 3,
+      "sqft": 3800,
+      "type": "apartment",
+      "image": "https://images.unsplash.com/photo-1706808849802-8f876ade0d1f?w=800",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Elegant Modern Residence",
+      "price": 3200000,
+      "location": "Westlands, Nairobi",
+      "beds": 6,
+      "baths": 5,
+      "sqft": 5200,
+      "type": "house",
+      "image": "https://images.unsplash.com/photo-1706808849803-f61304e024ab?w=800",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Waterfront Paradise",
+      "price": 4100000,
+      "location": "Lavington, Nairobi",
+      "beds": 5,
+      "baths": 5,
+      "sqft": 4800,
+      "type": "house",
+      "image": "https://images.unsplash.com/photo-1706808849827-7366c098b317?w=800",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Sophisticated Modern Home",
+      "price": 2650000,
+      "location": "Runda, Nairobi",
+      "beds": 4,
+      "baths": 4,
+      "sqft": 4200,
+      "type": "house",
+      "image": "https://images.unsplash.com/photo-1706808849777-96e0d7be3bb7?w=800",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Luxury Pool Estate",
+      "price": 3750000,
+      "location": "Thika Road, Kiambu",
+      "beds": 5,
+      "baths": 4,
+      "sqft": 4900,
+      "type": "house",
+      "image": "https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=800",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "City View Apartment",
+      "price": 850000,
+      "location": "Upper Hill, Nairobi",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1200,
+      "type": "apartment",
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Garden Condo",
+      "price": 620000,
+      "location": "South C, Nairobi",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1800,
+      "type": "condo",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
+      "featured": false
+    }
+  ],
+  "agents": [
+    {
+      "id": 1,
+      "name": "Ilhan Ahamed",
+      "role": "Property Manager",
+      "email": "ilhan.ahamed@yetuhousing.co.ke",
+      "phone": "+254 712 345 678",
+      "description": "A skilled professional with a deep understanding of the real estate market, responsible for managing and overseeing properties, ensuring tenant satisfaction, and maximizing property value.",
+      "listings": [1, 4]
+    },
+    {
+      "id": 2,
+      "name": "Kevin Maina",
+      "role": "Sales Manager",
+      "email": "kevin.maina@yetuhousing.co.ke",
+      "phone": "+254 723 456 789",
+      "description": "An experienced sales manager with a proven track record of driving revenue growth, leading high-performing sales teams, and developing effective sales strategies.",
+      "listings": [2, 3, 5]
+    },
+    {
+      "id": 3,
+      "name": "Amina Oduya",
+      "role": "Leasing Consultant",
+      "email": "amina.oduya@yetuhousing.co.ke",
+      "phone": "+254 734 567 890",
+      "description": "Specialist in residential leasing with 6 years helping clients find ideal rental properties across Nairobi's top neighborhoods.",
+      "listings": [6, 7, 8]
+    }
+  ],
+  "contacts": []
+}
