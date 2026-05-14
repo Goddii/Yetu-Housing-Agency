@@ -10,7 +10,8 @@
       "sqft": 4200,
       "type": "house",
       "image": "https://images.unsplash.com/photo-1706855203772-c249b75fe016?w=800",
-      "featured": true
+      "featured": true,
+      "description": "A beautifully designed modern family home located in the heart of Kilimani. This spacious property features 5 bedrooms, 4 bathrooms, and a large living area perfect for entertaining. The contemporary architecture and high-end finishes make this home a true gem in one of Nairobi's most sought-after neighborhoods."
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "sqft": 3800,
       "type": "apartment",
       "image": "https://images.unsplash.com/photo-1706808849802-8f876ade0d1f?w=800",
-      "featured": true
+      "featured": true,
+      "description": "A stunning contemporary estate offering modern amenities and a luxurious lifestyle. This property features spacious living areas, a state-of-the-art kitchen, and beautifully landscaped gardens. Perfect for those seeking elegance and comfort in a prime location."
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "sqft": 5200,
       "type": "house",
       "image": "https://images.unsplash.com/photo-1706808849803-f61304e024ab?w=800",
-      "featured": true
+      "featured": true,
+      "description": "An elegant modern residence offering a perfect blend of comfort and style. This property features 6 bedrooms, 5 bathrooms, and a large living area ideal for entertaining. The sophisticated design and premium finishes make this home a true luxury retreat."
     },
     {
       "id": 4,
@@ -46,7 +49,8 @@
       "sqft": 4800,
       "type": "house",
       "image": "https://images.unsplash.com/photo-1706808849827-7366c098b317?w=800",
-      "featured": false
+      "featured": false,
+      "description": "A breathtaking water view property offering a serene and luxurious lifestyle. This home features 5 bedrooms, 5 bathrooms, and a large living area with direct access to the water. The stunning architecture and premium finishes make this home a true paradise."
     },
     {
       "id": 5,
@@ -58,7 +62,8 @@
       "sqft": 4200,
       "type": "house",
       "image": "https://images.unsplash.com/photo-1706808849777-96e0d7be3bb7?w=800",
-      "featured": false
+      "featured": false,
+      "description": "A sophisticated modern home offering a perfect blend of comfort and style. This property features 4 bedrooms, 4 bathrooms, and a large living area ideal for entertaining. The elegant design and premium finishes make this home a true luxury retreat."
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
       "sqft": 4900,
       "type": "house",
       "image": "https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?w=800",
-      "featured": false
+      "featured": false,
+      "description": "A luxurious pool estate offering a perfect blend of comfort and style. This property features 5 bedrooms, 4 bathrooms, and a large living area ideal for entertaining. The elegant design and premium finishes make this home a true luxury retreat."
     },
     {
       "id": 7,
@@ -81,7 +87,7 @@
       "baths": 2,
       "sqft": 1200,
       "type": "apartment",
-      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
+      "image": "https://images.unsplash.com/photo-1706808849803-f61304e024ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       "featured": false
     },
     {
@@ -93,8 +99,9 @@
       "baths": 2,
       "sqft": 1800,
       "type": "condo",
-      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-      "featured": false
+      "image": "https://images.unsplash.com/photo-1706808849827-7366c098b317?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "featured": false,
+      "description": "A beautiful garden condo offering a peaceful and serene lifestyle. This property features 3 bedrooms, 2 bathrooms, and a large living area with access to the garden. The elegant design and premium finishes make this home a true retreat."
     }
   ],
   "agents": [
