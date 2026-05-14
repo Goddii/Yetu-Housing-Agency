@@ -1,8 +1,5 @@
 
 import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
-import houseimg from '../assets/house2.jpg'
-import house3 from '../assets/house3.jpg'
-import house4 from '../assets/house4.jpg'
 import logo from '../assets/logo.png'
 import Footer from "./Footer";
 
@@ -47,36 +44,7 @@ function Home(){
                     <div className="header-section">
                         <h3>Featured Houses</h3>
                     </div>               
-                    <div className="home-card">
-                    
-                        <div className="image-card">
-                            <img src={houseimg} alt="a beautiful house" />
-                            <div className="image-section">
-                                <p><i className="fas fa-location-dot"></i>Kilimani,Nairobi</p>
-                                <p>Unique house</p>
 
-                            </div>
-
-                        </div>
-                        <div className="image-card">
-                            <img src={house3} alt="a beautiful villa" />
-                            <div className="image-section">
-                                <p><i className="fas fa-location-dot"></i>Kileleshwa,Nairobi</p>
-                                <p>Cool house</p>
-                            </div>
-                        </div>
-
-                        <div className="image-card">
-                            <img src={house4} alt="a beautiful condo" />
-                            <div className="image-section">
-                            <p><i className="fas fa-location-dot"></i>Thika road, Kiambu</p>
-                            <p>Big house</p>
-                            </div>
-
-                        </div>
-  
-
-                    </div> 
                     <div className="btn-props">
                         <button className="button-84"><Link to='/properties'>View All Properties</Link></button> 
                     </div>  
