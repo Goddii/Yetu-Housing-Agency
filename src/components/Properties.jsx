@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Properties.css';
 import PropertyList from './PropertyList';
 import { Link } from 'react-router-dom';
+import { db } from '../firebase'
+import { collection, getDocs } from 'firebase/firestore'
+
 function Properties() {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -12,13 +15,19 @@ function Properties() {
     });
 
     useEffect(() => {
-        fetch('http://localhost:3001/properties')
-            .then(response => response.json())
-            .then(data => {
-                setProperties(data);
-                setLoading(false);
-            });
-    }, []);
+    const fetchProperties = async () => {
+        try {
+            const snapshot = await getDocs(collection(db, 'properties'))
+            const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+            setProperties(data)
+            setLoading(false)
+        } catch (err) {
+            console.error('Error:', err)
+            setLoading(false)
+        }
+    }
+    fetchProperties()
+    }, [])
 
     function handleFilterChnge(e) {
         setFilters({...filters, [e.target.name]: e.target.value})

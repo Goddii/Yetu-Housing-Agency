@@ -6,6 +6,8 @@
     } from "react-icons/fa";
     import Footer from "./Footer";
     import {useState} from "react";
+    import { db } from '../firebase'
+    import { collection, addDoc } from 'firebase/firestore'
 
     const Contact = () => {
     const [formData, setFormData] = useState({
@@ -40,32 +42,22 @@ const handleChange = (e) => {
 };
 
 // Handle form submission
-const handleSubmit = (e) => {
-  e.preventDefault();
-  fetch("http://localhost:3001/contacts",{
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ ...formData, date: new Date().toLocaleDateString() })
-  })
-    .then(response => response.json())
-    .then(() => {
-      alert("Message sent successfully!");
-    })
-    .catch((error) => {
-      console.error("Error sending message:", error);
-    });
-
-  const newMessage = {
-    Id: Date.now(),
-    ...formData
-  };
-
-  console.log("New Message:", newMessage);
-    // Reset form after submission
-    setFormData({ name: "", email: "", subject: "General Inquiry", message: "" });
-};
+const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    try {
+        await addDoc(collection(db, 'contacts'), {
+            ...formData,
+            date: new Date().toLocaleDateString()
+        })
+        setSubmitted(true)
+        setLoading(false)
+        setFormData({ name: '', email: '', subject: 'General Inquiry', message: '' })
+    } catch (err) {
+        console.error('Error sending message:', err)
+        setLoading(false)
+    }
+}
 
 return (
             <div>
