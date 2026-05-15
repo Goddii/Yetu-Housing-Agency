@@ -174,8 +174,8 @@ return (
 
                 <div>
                     <h4>Office Address</h4>
-                    <p>123 Real Estate Ave</p>
-                    <p>New York, NY 10001</p>
+                    <p>Kilimani </p>
+                    <p>Nairobi, NBO 10001</p>
                 </div>
                 </div>
 
@@ -184,7 +184,7 @@ return (
 
                 <div>
                     <h4>Phone</h4>
-                    <p>(555) 123-4567</p>
+                    <p>(+254) 7123-4567</p>
                 </div>
                 </div>
 
@@ -193,7 +193,7 @@ return (
 
                 <div>
                     <h4>Email</h4>
-                    <p>info@luxeestates.com</p>
+                    <p>info@yetuhousing.com</p>
                 </div>
                 </div>
 
