@@ -11,11 +11,14 @@
 
     const Contact = () => {
     const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  subject: "General Inquiry",
-  message: ""
-});
+        name: "",
+        email: "",
+        subject: "General Inquiry",
+        message: ""
+    });
+    const [submitted, setSubmitted] = useState(false)
+    const [loading, setLoading] = useState(false)
+
 
 
 // Handle form input changes
@@ -141,6 +144,21 @@ return (
                             <button className="send-btn" type="submit">
                                 Send Message
                             </button>
+                            {submitted && (
+                                <div style={{
+                                    backgroundColor: '#e6f4ea',
+                                    color: '#2d6a4f',
+                                    padding: '15px',
+                                    borderRadius: '8px',
+                                    marginTop: '20px',
+                                    textAlign: 'center',
+                                    fontWeight: 'bold'
+                                }}>
+                                    ✅ Message sent! We'll get back to you soon.
+                                </div>
+                            )}
+                            
+
                         </form>
                     </div>
 
