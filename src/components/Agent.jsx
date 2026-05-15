@@ -23,14 +23,15 @@ function Agent() {
     }, [])
 
     return (
-        <div className="agent-container">
+    
+      <div className="agent-container">
             {agent.map((agent) => ( 
-                <div key={agent.id} className="agent-card">
+                 <div key={agent.id} className="agent-card">
                     <h3 className="agent-name">{agent.name}</h3>
                     <p><strong>Role:</strong> {agent.role}</p>
                     <p><strong>Description:</strong> {agent.description}</p>
                     <p><strong>Email:</strong> {agent.email}</p>
-
+                    <p><strong>Phone:</strong> {agent.phone}</p>
                     <h3 className="listings-title">My Listings</h3>
                     <div className="listings-container">
                         {agent.listings && agent.listings.map((listing, index) => (
@@ -45,6 +46,7 @@ function Agent() {
                 </div>
             ))} 
         </div>
+    
     );
 }
 
