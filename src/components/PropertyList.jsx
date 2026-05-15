@@ -1,20 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Properties.css';
+import { db } from '../firebase'
+import { doc, getDoc } from 'firebase/firestore'
+
+
 function PropertyList() {
     const [property, setProperty] = useState([]);
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3001/properties/${id}`)
-            .then(response => response.json())
-            .then(data => {
-                setProperty(data);
-                setLoading(false);
-            });
-    }, [id]);
-
+    const fetchProperty = async () => {
+        try {
+            const docRef = doc(db, 'properties', id)
+            const docSnap = await getDoc(docRef)
+            if (docSnap.exists()) {
+                setProperty({ id: docSnap.id, ...docSnap.data() })
+            }
+            setLoading(false)
+        } catch (err) {
+            console.error('Error:', err)
+            setLoading(false)
+        }
+    }
+    fetchProperty()
+    }, [id])
     if (loading) {
         return <div>Loading properties...</div>;
     }
@@ -30,7 +41,7 @@ function PropertyList() {
                     <h2>{property.title}</h2>
                     <h3>{property.name}</h3>
                     <h5> ${property.price.toLocaleString()}</h5>
-                    <p>{property.bedrooms} beds, {property.bathrooms} baths - {property.sqft} sqft</p>
+                    <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
                     <p>{property.description}</p>
                 </div>
             

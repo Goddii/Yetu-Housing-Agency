@@ -1,6 +1,8 @@
 
 import {useState, useEffect} from "react";
 import  "../App.css";
+import { db } from '../firebase'
+import { collection, getDocs } from 'firebase/firestore'
 
 
 
@@ -8,15 +10,17 @@ function Agent() {
     const [agent, setAgent] = useState([]);
 
     useEffect(() => {
-         fetch ("http://localhost:3001/agents")
-        .then((response) => response.json())
-        .then((data) => {
-            setAgent(data);
-        })
-        .catch((error) => {
-            console.error("Error fetching agent data:", error);
-        });
- }, []);
+    const fetchAgents = async () => {
+        try {
+            const snapshot = await getDocs(collection(db, 'agents'))
+            const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+            setAgent(data)
+        } catch (err) {
+            console.error('Error fetching agent data:', err)
+        }
+    }
+    fetchAgents()
+    }, [])
 
     return (
         <div className="agent-container">

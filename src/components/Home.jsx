@@ -3,6 +3,8 @@ import { BrowserRouter,Routes,Route,Link } from "react-router-dom";
 import logo from '../assets/logo.png'
 import Footer from "./Footer";
 import { useEffect, useState } from "react";
+import { db } from '../firebase'
+import { collection, query, where, getDocs } from 'firebase/firestore'
 
 function Home(){
 
@@ -11,18 +13,23 @@ function Home(){
 
 
     useEffect(() => {
-        fetch('http://localhost:3001/properties?featured=true')
-        .then(res => res.json())
-        .then(data => {
+    const fetchFeatured = async () => {
+        try {
+            const q = query(
+                collection(db, 'properties'),
+                where('featured', '==', true)
+            )
+            const snapshot = await getDocs(q)
+            const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
             setFeatured(data)
             setLoading(false)
-
-        })
-        .catch(err => {
-            console.error('Error: ', err)
+        } catch (err) {
+            console.error('Error:', err)
             setLoading(false)
-        }) 
-    },[])
+        }
+    }
+    fetchFeatured()
+    }, [])
 
 
 
