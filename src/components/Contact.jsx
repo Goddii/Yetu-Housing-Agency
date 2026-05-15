@@ -11,11 +11,14 @@
 
     const Contact = () => {
     const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  subject: "General Inquiry",
-  message: ""
-});
+        name: "",
+        email: "",
+        subject: "General Inquiry",
+        message: ""
+    });
+    const [submitted, setSubmitted] = useState(false)
+    const [loading, setLoading] = useState(false)
+
 
 
 // Handle form input changes
@@ -141,6 +144,21 @@ return (
                             <button className="send-btn" type="submit">
                                 Send Message
                             </button>
+                            {submitted && (
+                                <div style={{
+                                    backgroundColor: '#e6f4ea',
+                                    color: '#2d6a4f',
+                                    padding: '15px',
+                                    borderRadius: '8px',
+                                    marginTop: '20px',
+                                    textAlign: 'center',
+                                    fontWeight: 'bold'
+                                }}>
+                                    ✅ Message sent! We'll get back to you soon.
+                                </div>
+                            )}
+                            
+
                         </form>
                     </div>
 
@@ -156,8 +174,8 @@ return (
 
                 <div>
                     <h4>Office Address</h4>
-                    <p>123 Real Estate Ave</p>
-                    <p>New York, NY 10001</p>
+                    <p>Kilimani </p>
+                    <p>Nairobi, NBO 10001</p>
                 </div>
                 </div>
 
@@ -166,7 +184,7 @@ return (
 
                 <div>
                     <h4>Phone</h4>
-                    <p>(555) 123-4567</p>
+                    <p>(+254) 7123-4567</p>
                 </div>
                 </div>
 
@@ -175,7 +193,7 @@ return (
 
                 <div>
                     <h4>Email</h4>
-                    <p>info@luxeestates.com</p>
+                    <p>info@yetuhousing.com</p>
                 </div>
                 </div>
 
