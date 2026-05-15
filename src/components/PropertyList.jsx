@@ -41,7 +41,7 @@ function PropertyList() {
                     <h2>{property.title}</h2>
                     <h3>{property.name}</h3>
                     <h5> ${property.price.toLocaleString()}</h5>
-                    <p>{property.bedrooms} beds, {property.bathrooms} baths - {property.sqft} sqft</p>
+                    <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
                     <p>{property.description}</p>
                 </div>
             

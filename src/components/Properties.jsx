@@ -77,7 +77,7 @@ function Properties() {
                     <option value="500000+">$500,000+</option>
                 </select>
                 <label htmlFor="property-type">Property Type:</label>
-                <select id="property-type" name="property-type" value={filters.type} placeholder="All Types" onChange={handleFilterChnge}>
+                <select id="property-type" name="type" value={filters.type} placeholder="All Types" onChange={handleFilterChnge}>
                     <option value="">All Types</option>
                     <option value="house">House</option>
                     <option value="apartment">Apartment</option>
@@ -99,11 +99,11 @@ function Properties() {
             {filteredProperty.map(property => (
                <Link to={`/properties/${property.id}`} key={property.id} style={{textDecoration: 'none', color: 'inherit'}}>
                     <div className="property-card" key={property.id}>
-                        <img src={property.image} alt={property.name} />
-                        <h3>{property.name}</h3>
+                        <img src={property.image} alt={property.title} />
+                        <h3>{property.title}</h3>
                         <p>{property.location}</p>
                         <h5> ${property.price.toLocaleString()}</h5>
-                        <p>{property.bedrooms} beds, {property.bathrooms} baths - {property.sqft} sqft</p>
+                        <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
                     </div>
                 </Link>
             ))}
