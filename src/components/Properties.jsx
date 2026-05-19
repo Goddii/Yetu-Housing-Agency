@@ -74,7 +74,8 @@ function Properties() {
             setFavorites(updated)
         } else {
             const updated = [...existing,property]
-            localStorage.setItem('favo')
+            localStorage.setItem('favourites', JSON.stringify(updated))
+            setFavorites(updated)
         }
     }
 
@@ -127,7 +128,7 @@ function Properties() {
                         <h5> ${property.price.toLocaleString()}</h5>
                         <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
 
-                        <button className="button-84" >ADD TO FAVORITES</button>
+                        <button className="button-84" style={{backgroundColor: isFavourited ? '#e74c3c': ''}} onChange={handleFavourite(e, property) }>{isFavourited ? '❤️SAVED' : '🤍 ADD TO FAVORITES'}</button>
                     </div>
                 </Link>
             ))}
