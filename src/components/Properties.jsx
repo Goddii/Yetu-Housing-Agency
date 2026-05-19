@@ -108,6 +108,7 @@ function Properties() {
                 </select>
                 </div>
                 </div>
+            <div><button></button></div>    
         </div>
         <div className="properties-listing">
 

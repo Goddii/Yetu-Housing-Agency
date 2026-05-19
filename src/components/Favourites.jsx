@@ -42,7 +42,7 @@ function Favourites() {
                 )}
 
                 {favourites.map(property => (
-                    <div key={property.id} alt={'property.title'}>
+                    <div key={property.id} alt={'property.title'} className="property-card">
                         <img src={property.image} alt={property.title} />
                         <h3>{property.title}</h3>
                         <p>{property.location}</p>

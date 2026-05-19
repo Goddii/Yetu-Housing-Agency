@@ -71,8 +71,23 @@
     background-color: white;
     border: 0px solid #ccc;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    margin:auto;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
+.link-back a{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+
+
+}
+.image-prop-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
 img {
     width: 100%;
     height: auto;
