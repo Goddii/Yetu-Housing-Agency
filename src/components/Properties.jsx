@@ -8,6 +8,10 @@ import { collection, getDocs } from 'firebase/firestore'
 function Properties() {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [favorites, setFavorites] = useState(() => {
+        const saved = localStorage.getItem('favorites')
+        return saved ? JSON.parse(saved)
+    });
     const [filters, setFilters] = useState({
         location: '',
         price: '',
@@ -104,6 +108,8 @@ function Properties() {
                         <p>{property.location}</p>
                         <h5> ${property.price.toLocaleString()}</h5>
                         <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
+
+                        <button className="button-84" >ADD TO FAVORITES</button>
                     </div>
                 </Link>
             ))}
