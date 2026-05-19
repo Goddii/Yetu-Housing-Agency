@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import { CgEnter } from "react-icons/cg";
 import { Link } from "react-router-dom";
 
 
@@ -55,6 +56,7 @@ function Favourites() {
                                 <button className="button-84" style={{width: '100%'}}>
                                     View Details
                                 </button>
+
                             </Link>
                             <button className="button-84"
                             onClick={() => handleRemove(property.id)}
@@ -62,6 +64,12 @@ function Favourites() {
                             >
                                 Remove
                             </button>
+                            <Link to={`/contact`}>
+                                <button className="button-84" style={{flex:1, width: '100%'}}>
+                                    Book a tour
+                                </button>
+                            </Link>
+
 
                         </div>
                     </div>
