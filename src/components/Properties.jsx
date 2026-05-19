@@ -10,7 +10,7 @@ function Properties() {
     const [loading, setLoading] = useState(true);
     const [favorites, setFavorites] = useState(() => {
         const saved = localStorage.getItem('favorites')
-        return saved ? JSON.parse(saved)
+        return saved ? JSON.parse(saved) : []
     });
     const [filters, setFilters] = useState({
         location: '',
@@ -58,6 +58,24 @@ function Properties() {
     
     if (loading) {
         return <div>Loading properties...</div>;
+    }
+
+    function handleFavourite(e, property){
+        e.preventDafault()
+        e.stopPropagation()
+
+
+        const existing = JSON.parse(localStorage.getItem('favourites') || '[]')
+        const alreadySaved = existing.find(p => p.id === property.id)
+
+        if (alreadySaved) {
+            const updated = existing.filter(p => p.id === property.id)
+            localStorage.setItem('favourites',JSON.stringify(updated))
+            setFavorites(updated)
+        } else {
+            const updated = [...existing,property]
+            localStorage.setItem('favo')
+        }
     }
 
     return(
