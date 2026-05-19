@@ -69,7 +69,7 @@ function Properties() {
         const alreadySaved = existing.find(p => p.id === property.id)
 
         if (alreadySaved) {
-            const updated = existing.filter(p => p.id === property.id)
+            const updated = existing.filter(p => p.id !== property.id)
             localStorage.setItem('favourites',JSON.stringify(updated))
             setFavorites(updated)
         } else {
@@ -117,21 +117,25 @@ function Properties() {
                 <p style = {{padding:'10px'}}>No properties match your search</p>
             )}
 
+            {filteredProperty.map( property => {
+                const isFavourited = favorites.find(p => p.id === property.id)
 
-
-            {filteredProperty.map(property => (
-               <Link to={`/properties/${property.id}`} key={property.id} style={{textDecoration: 'none', color: 'inherit'}}>
-                    <div className="property-card" key={property.id}>
+                return (
+                    <Link to={'/properties/${property.id}'} style={{textDecoration: 'none', color:'inherit'}} >
                         <img src={property.image} alt={property.title} />
                         <h3>{property.title}</h3>
                         <p>{property.location}</p>
-                        <h5> ${property.price.toLocaleString()}</h5>
-                        <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
+                        <h5>${property.beds} beds, {property.baths} baths - {property.sqft} sqft</h5>
 
-                        <button className="button-84" style={{backgroundColor: isFavourited ? '#e74c3c': ''}} onChange={handleFavourite(e, property) }>{isFavourited ? '❤️SAVED' : '🤍 ADD TO FAVORITES'}</button>
-                    </div>
-                </Link>
-            ))}
+                        <button className='button-84' style={{backgroundColor: isFavourited ? '#e74c3c':''}} onClick={(e) => handleFavourite(e,property)}>
+                            {isFavourited ? '❤️ Saved' : '🤍 Add to Favorites'}
+                        </button>
+                    </Link>
+                )
+            })}
+
+
+
         </div>
      
                 

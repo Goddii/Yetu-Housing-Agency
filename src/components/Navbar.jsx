@@ -21,6 +21,7 @@ function Navbar() {
                 <Link to='/properties'><i className="fas fa-building"></i>Properties</Link>
                 <Link to='/agent'><i className="fas fa-user-tie"></i>Agent</Link>
                 <Link to='/contact'><i className="fas fa-message"></i> Contact</Link>
+                <Link to='/favoutites'><i className="fas fa-heart">Favourites</i></Link>
                 
 
             </div>
