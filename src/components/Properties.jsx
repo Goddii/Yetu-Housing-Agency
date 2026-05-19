@@ -8,8 +8,8 @@ import { collection, getDocs } from 'firebase/firestore'
 function Properties() {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [favorites, setFavorites] = useState(() => {
-        const saved = localStorage.getItem('favorites')
+    const [favourites, setFavorites] = useState(() => {
+        const saved = localStorage.getItem('favourites')
         return saved ? JSON.parse(saved) : []
     });
     const [filters, setFilters] = useState({
@@ -61,7 +61,7 @@ function Properties() {
     }
 
     function handleFavourite(e, property){
-        e.preventDafault()
+        e.preventDefault()
         e.stopPropagation()
 
 
@@ -118,18 +118,20 @@ function Properties() {
             )}
 
             {filteredProperty.map( property => {
-                const isFavourited = favorites.find(p => p.id === property.id)
+                const isFavourited = favourites.find(p => p.id === property.id)
 
                 return (
-                    <Link to={'/properties/${property.id}'} style={{textDecoration: 'none', color:'inherit'}} >
-                        <img src={property.image} alt={property.title} />
-                        <h3>{property.title}</h3>
-                        <p>{property.location}</p>
-                        <h5>${property.beds} beds, {property.baths} baths - {property.sqft} sqft</h5>
+                    <Link to={`/properties/${property.id}`} key={property.id} style={{textDecoration: 'none', color:'inherit'}} >
+                        <div className='property-card'>
+                            <img src={property.image} alt={property.title} />
+                            <h3>{property.title}</h3>
+                            <p>{property.location}</p>
+                            <h5>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</h5>
 
-                        <button className='button-84' style={{backgroundColor: isFavourited ? '#e74c3c':''}} onClick={(e) => handleFavourite(e,property)}>
-                            {isFavourited ? '❤️ Saved' : '🤍 Add to Favorites'}
-                        </button>
+                            <button className='button-84' style={{backgroundColor: isFavourited ? '#e74c3c':''}} onClick={(e) => handleFavourite(e,property)}>
+                                {isFavourited ? '❤️ Saved' : '🤍 Add to Favorites'}
+                            </button>
+                        </div>
                     </Link>
                 )
             })}

@@ -42,6 +42,7 @@ function Favourites() {
 
                 {favourites.map(property => (
                     <div key={property.id} alt={'property.title'}>
+                        <img src={property.image} alt={property.title} />
                         <h3>{property.title}</h3>
                         <p>{property.location}</p>
                         <h5>${property.price.toLocaleString()}</h5>
@@ -50,7 +51,7 @@ function Favourites() {
                         <p>{property.sqft} sqft</p>
 
                         <div style={{display: 'flex', gap:'10px', marginTop:'10px'}}>
-                            <Link to={'/properties/&{property.id'} style={{flex: 1}}>
+                            <Link to={`/properties/${property.id}`} style={{flex: 1}}>
                                 <button className="button-84" style={{width: '100%'}}>
                                     View Details
                                 </button>
