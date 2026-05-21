@@ -54,7 +54,7 @@ export default function Listings() {
     }
 
     return (
-        <div className="listings-container">
+        <div>
             <div style={{
                 backgroundColor: 'oklch(60.129% 0.20181 259.183)',
                 padding: '40px',
@@ -66,7 +66,7 @@ export default function Listings() {
                 <p>Fill in the details to add a new property</p>
 
             </div>
-            <div>
+            <div className="listings-container">
             <form onSubmit={handleSubmit}>
                 <div className="listings-form">
                     <label>Property Title</label>
@@ -109,6 +109,16 @@ export default function Listings() {
                         onChange={handleChange}
                         placeholder="eg 3200"
                     />
+                    <label>Price $</label>
+                    <input  
+                        name="price"
+                        type="number"
+                        value={formData.price}
+                        onChange={handleChange}
+                        placeholder="e.g $ 200000"
+                        required
+                        
+                    />
                     <label>Image url</label>
                     <input 
                         name="image"
@@ -142,7 +152,41 @@ export default function Listings() {
                         required
                         
                     />
-                    <l
+                    <div style={{display:'inline-block', gap:'10px',fontSize: '14px'}}>
+
+                        <label>
+                        <input 
+                            type="checkbox"
+                            name="featured"
+                            onChange={handleChange}
+                        />
+                            Feature this property on the Home page
+                        </label>
+
+                    </div>
+
+                    <button className="button-84"
+                            type="submit"
+                            disabled={loading}
+                            style={{ marginTop: '20px'}}
+                    >
+                        {loading ? 'Adding...' : 'Add Listing'}
+                    </button>
+
+                    {submitted && (
+                        <div style={{
+                            backgroundColor: '#e6f4ea',
+                            color: '#2d6a4f',
+                            padding: '15px',
+                            borderRadius: '8px',
+                            marginTop: '20px',
+                            textAlign: 'center',
+                            fontWeight: 'bold'
+                        }}>
+                             ✅ Property added! Redirecting to listings...
+                        </div>
+                    )}
+
                 </div>
 
             </form>

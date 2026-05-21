@@ -3,10 +3,40 @@
     flex-direction: column;
     border: none;
     border-radius: 5px;
-    gap: 10px;
-    padding: 10px;
+    padding: 40px;
+    max-width: 700px;
+    background: white;
 }
 .listings-form {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.listings-form label {
+    font-weight: bold;
+    color: #333;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.listings-form input,
+.listings-form select,
+.listings-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 50%;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.listings-form input:focus,
+.listings-form select:focus,
+.listings-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
 }
