@@ -72,22 +72,77 @@ export default function Listings() {
                     <label>Property Title</label>
                     <input name="title"
                            value={formData.title}
-                           onChange={handleChange} 
+                           onChange={handleChange}
+                           placeholder="e.g Modern Family Home"
+                           required 
                     />
-                    <label>Add Location</label>
-                    <input />
-                    <label>Add Beds</label>
-                    <input />
-                    <label>Add Baths</label>
-                    <input />
-                    <label>Add Sqft</label>
-                    <input />
-                    <label>Add Description</label>
-                    <textarea />
-                    <div>
-                        <label>Add image</label>
-                        <input />
-                    </div>
+                    <label>Location</label>
+                    <input name="location"
+                        value={formData.location}
+                        onChange={handleChange}
+                        placeholder="e.g Kilimani Nairobi"
+                        required
+                    />
+                    <label>Bedrooms</label>
+                    <input 
+                        name="beds"
+                        type="number"
+                        value={formData.beds}
+                        onChange={handleChange}
+                        placeholder="e.g 2"
+                        required
+                    />
+                    <label>Bathrooms</label>
+                    <input 
+                        name="baths"
+                        type="number"
+                        value={formData.baths}
+                        onChange={handleChange}
+                        placeholder="eg. 3"
+                        required
+                    />
+                    <label>Sqft</label>
+                    <input 
+                        name="sqft"
+                        type="number"
+                        value={formData.sqft}
+                        onChange={handleChange}
+                        placeholder="eg 3200"
+                    />
+                    <label>Image url</label>
+                    <input 
+                        name="image"
+                        value={formData.image}
+                        onChange={handleChange}
+                        placeholder="https://images.unsplash.com..."
+                        required
+
+                    />
+                    {formData.image && (
+                        <img 
+                            src={formData.image}
+                            alt="preview"
+                            style={{
+                                width: '100%',
+                                maxHeight: '200px',
+                                objectFit: 'cover',
+                                borderRadius: '8px',
+                                margin: '10px 0'
+                            }}
+                            onError={(e) => e.target.style.display = 'none'}
+                        />
+                    )}
+                    <label>Description</label>
+                    <textarea  
+                        name="description"
+                        value={formData.description}
+                        onChange={handleChange}
+                        rows='5'
+                        placeholder="Descrive the property...."
+                        required
+                        
+                    />
+                    <l
                 </div>
 
             </form>
