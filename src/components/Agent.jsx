@@ -24,7 +24,19 @@ function Agent() {
 
     return (
     
-      <div className="agent-container">
+      <div>
+             <div style={{
+                backgroundColor: 'oklch(60.129% 0.20181 259.183)',
+                padding: '40px',
+                color: 'white'
+            }
+                
+            }>
+                <h1>Agents</h1>
+                <p>Our top professional agents and realtors</p>
+
+            </div>
+            <div className="agent-container">
             {agent.map((agent) => ( 
                  <div key={agent.id} className="agent-card">
                     <h3 className="agent-name">{agent.name}</h3>
@@ -44,7 +56,8 @@ function Agent() {
                         ))}
                     </div>
                 </div>
-            ))} 
+            ))}
+            </div> 
         </div>
     
     );
