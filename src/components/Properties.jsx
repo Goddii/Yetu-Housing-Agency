@@ -141,7 +141,7 @@ function Properties() {
                             <h5><i class="fas fa-bed"></i> {property.beds} beds, <i class="fas fa-bath"></i> {property.baths} baths - <i class="fas fa-ruler-combined"></i>{property.sqft} sqft</h5>
 
                             <button className='button-84' style={{backgroundColor: isFavourited ? '#e74c3c':''}} onClick={(e) => handleFavourite(e,property)}>
-                                {isFavourited ? '❤️ Saved' : '🤍 Add to Favorites'}
+                                {isFavourited ? ' Saved' : ' Add to Favorites'}
                             </button>
                         </div>
                     </Link>
