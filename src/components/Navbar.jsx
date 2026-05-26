@@ -20,7 +20,9 @@ function Navbar() {
                 <Link to='/'><i className="fas fa-house"></i>Home</Link>
                 <Link to='/properties'><i className="fas fa-building"></i>Properties</Link>
                 <Link to='/agent'><i className="fas fa-user-tie"></i>Agent</Link>
+                <Link to='/favourites'><i className="fas fa-heart"></i> Favourites </Link>
                 <Link to='/contact'><i className="fas fa-message"></i> Contact</Link>
+                
                 
 
             </div>

@@ -8,6 +8,10 @@ import { collection, getDocs } from 'firebase/firestore'
 function Properties() {
     const [properties, setProperties] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [favourites, setFavorites] = useState(() => {
+        const saved = localStorage.getItem('favourites')
+        return saved ? JSON.parse(saved) : []
+    });
     const [filters, setFilters] = useState({
         location: '',
         price: '',
@@ -56,6 +60,25 @@ function Properties() {
         return <div>Loading properties...</div>;
     }
 
+    function handleFavourite(e, property){
+        e.preventDefault()
+        e.stopPropagation()
+
+
+        const existing = JSON.parse(localStorage.getItem('favourites') || '[]')
+        const alreadySaved = existing.find(p => p.id === property.id)
+
+        if (alreadySaved) {
+            const updated = existing.filter(p => p.id !== property.id)
+            localStorage.setItem('favourites',JSON.stringify(updated))
+            setFavorites(updated)
+        } else {
+            const updated = [...existing,property]
+            localStorage.setItem('favourites', JSON.stringify(updated))
+            setFavorites(updated)
+        }
+    }
+
     return(
         <>
         
@@ -67,16 +90,16 @@ function Properties() {
             <div className="search-bar">
                <h2>Filters</h2>
                <div className="search-inputs">
-                <label htmlFor="location">Location:</label>
+                <label htmlFor="location"> Location: </label>
                 <input type="text" id="location" name="location" value={filters.location} placeholder="Enter location" onChange={handleFilterChnge} />
-                <label htmlFor="price">Price Range:</label> 
+                <label htmlFor="price">Price Range: </label> 
                 <select type="text"  id="price" name="price" value={filters.price} placeholder="All prices" onChange={handleFilterChnge}>
                     <option value="">All prices</option>
                     <option value="0-100000">Under $100,000</option>
                     <option value="100000-500000">$100,000 - $500,000</option>
                     <option value="500000+">$500,000+</option>
                 </select>
-                <label htmlFor="property-type">Property Type:</label>
+                <label htmlFor="property-type">Property Type: </label>
                 <select id="property-type" name="type" value={filters.type} placeholder="All Types" onChange={handleFilterChnge}>
                     <option value="">All Types</option>
                     <option value="house">House</option>
@@ -85,6 +108,18 @@ function Properties() {
                 </select>
                 </div>
                 </div>
+            <div>
+                <Link to = '/listings'>
+                <button className='button-84' 
+                style={{padding:'20px',
+                marginLeft:'20px',
+                marginBottom:'20px',
+                fontSize:'16px', 
+                display:'inline-block'}}>
+                <i class="fas fa-plus"></i> Add Listing
+                </button>
+                </Link>
+            </div>    
         </div>
         <div className="properties-listing">
 
@@ -94,19 +129,27 @@ function Properties() {
                 <p style = {{padding:'10px'}}>No properties match your search</p>
             )}
 
+            {filteredProperty.map( property => {
+                const isFavourited = favourites.find(p => p.id === property.id)
+
+                return (
+                    <Link to={`/properties/${property.id}`} key={property.id} style={{textDecoration: 'none', color:'inherit'}} >
+                        <div className='property-card'>
+                            <img src={property.image} alt={property.title} />
+                            <h3>{property.title}</h3>
+                            <p>{property.location}</p>
+                            <h5><i class="fas fa-bed"></i> {property.beds} beds, <i class="fas fa-bath"></i> {property.baths} baths - <i class="fas fa-ruler-combined"></i>{property.sqft} sqft</h5>
+
+                            <button className='button-84' style={{backgroundColor: isFavourited ? '#e74c3c':''}} onClick={(e) => handleFavourite(e,property)}>
+                                {isFavourited ? ' Saved' : ' Add to Favorites'}
+                            </button>
+                        </div>
+                    </Link>
+                )
+            })}
 
 
-            {filteredProperty.map(property => (
-               <Link to={`/properties/${property.id}`} key={property.id} style={{textDecoration: 'none', color: 'inherit'}}>
-                    <div className="property-card" key={property.id}>
-                        <img src={property.image} alt={property.title} />
-                        <h3>{property.title}</h3>
-                        <p>{property.location}</p>
-                        <h5> ${property.price.toLocaleString()}</h5>
-                        <p>{property.beds} beds, {property.baths} baths - {property.sqft} sqft</p>
-                    </div>
-                </Link>
-            ))}
+
         </div>
      
                 

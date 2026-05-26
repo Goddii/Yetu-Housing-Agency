@@ -7,6 +7,8 @@ import Agent from './components/Agent'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import PropertyList from './components/PropertyList'
+import Favourites from './components/Favourites'
+import Listings from './components/Listings'
 
 function App() {
   
@@ -21,6 +23,8 @@ function App() {
         <Route path='/agent' element={<Agent/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/properties/:id' element={<PropertyList/>}/>
+        <Route path='/favourites' element={<Favourites />} />
+        <Route path = '/listings' element={<Listings />} />
           
         
       </Routes>
