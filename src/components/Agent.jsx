@@ -26,7 +26,7 @@ function Agent() {
 
     return (
     
-      <div>
+      <div style={{border: 'none'}}>
              <div style={{
                 backgroundColor: 'oklch(60.129% 0.20181 259.183)',
                 padding: '40px',
@@ -74,10 +74,15 @@ function Agent() {
                         <div className="listings-container">
                             {agentItem.listings && agentItem.listings.map((listing, index) => (
                                 <div key={index} className="listing-card">
-                                    <h4>{listing.title}</h4>
-                                    <p><strong>Location:</strong> {listing.location}</p>
-                                    <p style={{ color: 'blue', fontWeight: 'bold' }}><strong>Price:</strong> {listing.price}</p>
-                                    <img src={listing.image} alt={listing.title} className="listing-img" />
+                                    <div className="listing-blob">
+                                        
+                                    </div>
+                                    <div className="listing-bg">
+                                        <h4>{listing.title}</h4>
+                                        <p><strong>Location:</strong> {listing.location}</p>
+                                        <p style={{ color: 'blue', fontWeight: 'bold' }}><strong>Price:</strong> {listing.price}</p>
+                                        <img src={listing.image} alt={listing.title} className="listing-img" />
+                                    </div>
                                 </div>
                             ))}
                         </div>
