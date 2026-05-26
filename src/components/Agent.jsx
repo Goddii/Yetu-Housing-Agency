@@ -43,7 +43,7 @@ function Agent() {
                  <div key={agentItem.id} className="agent-card">
                     <div className="agent-logo">
                         <div className="agent-image">
-                        <img src='' alt={agentItem.name}/>
+                        <img src={agentItem.avatar} alt={agentItem.name}/>
                         </div>
                         <div className="agent-contact">
                             <h3 className="agent-name" >{agentItem.name}</h3>
@@ -55,8 +55,11 @@ function Agent() {
                     <div className="agent-details">
                         
                         <p><strong>Description:</strong> {agentItem.description}</p>
-                        <p>Agency: {agentItem.Agency}</p>
-                        <p>Service Area: {agentItem.ServiceArea}</p>
+                        <p>Agency: {agentItem.agency}</p>
+                        <p style={{display:'inline-block', gap: '5px'}}>Service Area: {agentItem.serviceAreas?.join(', ') || 'N/A'}</p>
+                        <p>Experience: {agentItem.yearsExperience} years</p>
+                        <p>Ratings: {agentItem.rating || 'N/A'}</p>
+                        <p>Languages: {agentItem.languages?.join(', ') || 'N/A'}</p>
                         <div className="agent-icons">
                             <FaFacebook size={24} color="#1877F2" />
                             <FaInstagram size={24} color="#E1306C" />

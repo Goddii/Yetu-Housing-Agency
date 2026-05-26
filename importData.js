@@ -10,24 +10,48 @@ admin.initializeApp({
 
 const db = admin.firestore()
 
-async function importCollection(collectionName, data) {
-    console.log(`Importing ${collectionName}...`)
+/**
+ * Fully replaces all documents in a collection with new data.
+ * Step 1: Deletes every existing document in the collection.
+ * Step 2: Writes all new documents from db.json.
+ */
+async function replaceCollection(collectionName, data) {
+    console.log(`\n🗑️  Clearing old "${collectionName}" data...`)
+
+    // Delete all existing documents
+    const existing = await db.collection(collectionName).get()
+    const deleteBatch = db.batch()
+    existing.docs.forEach(doc => deleteBatch.delete(doc.ref))
+    await deleteBatch.commit()
+    console.log(`   ✓ Deleted ${existing.size} old document(s)`)
+
+    // Write new documents
+    console.log(`📦  Importing new "${collectionName}" data...`)
     for (const item of data) {
         const { id, ...rest } = item
         await db.collection(collectionName).doc(String(id)).set(rest)
-        console.log(`  ✓ Added ${collectionName} document ${id}`)
+        console.log(`   ✓ Written: ${collectionName}/${id}`)
     }
-    console.log(`${collectionName} done!\n`)
+
+    console.log(`✅  "${collectionName}" updated successfully!\n`)
 }
 
 async function main() {
-    await importCollection('properties', db_data.properties)
-    await importCollection('agents', db_data.agents)
-    console.log('All data imported successfully!')
+    console.log('='.repeat(50))
+    console.log(' Yetu Housing — Data Update Import')
+    console.log('='.repeat(50))
+
+    await replaceCollection('properties', db_data.properties)
+    await replaceCollection('agents', db_data.agents)
+    await replaceCollection('contacts', db_data.contacts)
+
+    console.log('='.repeat(50))
+    console.log(' 🎉 All collections updated successfully!')
+    console.log('='.repeat(50))
     process.exit(0)
 }
 
 main().catch(err => {
-    console.error('Import failed:', err)
+    console.error('❌ Import failed:', err)
     process.exit(1)
 })

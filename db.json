@@ -88,7 +88,8 @@
       "sqft": 1200,
       "type": "apartment",
       "image": "https://images.unsplash.com/photo-1706808849803-f61304e024ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      "featured": false
+      "featured": false,
+      "description": "A sleek city-view apartment perched above Upper Hill's thriving business district. Enjoy panoramic views of the Nairobi skyline from your private balcony. Ideal for young professionals seeking connectivity and modern urban living."
     },
     {
       "id": "8",
@@ -109,61 +110,160 @@
       "id": "1",
       "name": "Ilhan Ahamed",
       "role": "Property Manager",
+      "agency": "Yetu Housing Ltd",
       "email": "ilhan.ahamed@yetuhousing.co.ke",
       "phone": "+254 712 345 678",
-      "description": "A skilled professional with a deep understanding of the real estate market, responsible for managing and overseeing properties, ensuring tenant satisfaction, and maximizing property value.",
-      "listings": [  {
-                "title": "Real Estate",
-                "location": "South C, Nairobi",
-                "price": "$10,000",
-                "image": "/images/photo2.avif"
-             },
-                {
-                "title": "Sana Sana Estate",
-                "location": "South B, Nairobi",
-                "price": "$7,000",
-                "image": "/images/photo1.avif"
-                }]
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face",
+      "serviceAreas": ["South C", "South B", "Langata", "Imara Daima", "Embakasi"],
+      "yearsExperience": 8,
+      "totalListings": 47,
+      "rating": 4.8,
+      "languages": ["English", "Swahili", "Somali"],
+      "description": "Ilhan Ahamed is a seasoned Property Manager at Yetu Housing Ltd with over 8 years of hands-on experience in Nairobi's dynamic real estate market. He brings a deep understanding of both residential and commercial property management, ensuring that every property under his care is maintained to the highest standard. Ilhan is known for his proactive communication style, transparent reporting, and his ability to resolve tenant disputes swiftly and fairly. His portfolio spans over 47 properties across South Nairobi, and he has consistently achieved above-market occupancy rates for his clients. Whether you are a first-time landlord or a seasoned investor, Ilhan offers tailored management strategies that protect and grow your investment.",
+      "listings": [
+        {
+          "title": "Real Estate",
+          "location": "South C, Nairobi",
+          "price": "$10,000",
+          "image": "/images/photo2.avif"
+        },
+        {
+          "title": "Sana Sana Estate",
+          "location": "South B, Nairobi",
+          "price": "$7,000",
+          "image": "/images/photo1.avif"
+        },
+        {
+          "title": "Imara Heights Apartment",
+          "location": "Imara Daima, Nairobi",
+          "price": "$5,500",
+          "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600"
+        },
+        {
+          "title": "Langata Green Villa",
+          "location": "Langata, Nairobi",
+          "price": "$12,000",
+          "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600"
+        },
+        {
+          "title": "Embakasi Commercial Plaza",
+          "location": "Embakasi, Nairobi",
+          "price": "$18,000",
+          "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600"
+        },
+        {
+          "title": "Kware Executive Townhouse",
+          "location": "South C, Nairobi",
+          "price": "$9,500",
+          "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600"
+        }
+      ]
     },
     {
       "id": "2",
       "name": "Kevin Maina",
       "role": "Sales Manager",
+      "agency": "Yetu Housing Ltd",
       "email": "kevin.maina@yetuhousing.co.ke",
       "phone": "+254 723 456 789",
-      "description": "An experienced sales manager with a proven track record of driving revenue growth, leading high-performing sales teams, and developing effective sales strategies.",
-      "listings": [ {
-                "title": "A-one Acacia",
-                "location": "Kilimani, Nairobi",
-                "price": "$80,000",
-                "image": "/images/photo3.avif"
-            },
-            {
-                "title": "Libra Residence",
-                "location": "Kilimani, Nairobi",
-                "price": "$90,000",
-                "image": "/images/photo4.avif"
-            }]
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      "serviceAreas": ["Kilimani", "Westlands", "Kileleshwa", "Lavington", "Parklands"],
+      "yearsExperience": 11,
+      "totalListings": 63,
+      "rating": 4.9,
+      "languages": ["English", "Swahili", "Kikuyu"],
+      "description": "Kevin Maina is one of Nairobi's most accomplished Sales Managers, boasting over 11 years of experience closing high-value residential and luxury real estate deals. His in-depth knowledge of Nairobi's premium neighborhoods — from Kilimani to Westlands — has earned him a reputation as the go-to agent for discerning buyers and sellers. Kevin has facilitated over KES 2 billion in property transactions throughout his career and leads Yetu Housing's top-performing sales team. He is known for his sharp negotiation skills, comprehensive market analysis, and his unwavering commitment to client satisfaction. Kevin also mentors junior agents and actively participates in Nairobi's real estate investment forums as a featured speaker.",
+      "listings": [
+        {
+          "title": "A-one Acacia",
+          "location": "Kilimani, Nairobi",
+          "price": "$80,000",
+          "image": "/images/photo3.avif"
+        },
+        {
+          "title": "Libra Residence",
+          "location": "Kilimani, Nairobi",
+          "price": "$90,000",
+          "image": "/images/photo4.avif"
+        },
+        {
+          "title": "Westlands Skyline Penthouse",
+          "location": "Westlands, Nairobi",
+          "price": "$120,000",
+          "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600"
+        },
+        {
+          "title": "Kileleshwa Court Mansion",
+          "location": "Kileleshwa, Nairobi",
+          "price": "$95,000",
+          "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600"
+        },
+        {
+          "title": "Lavington Executive Home",
+          "location": "Lavington, Nairobi",
+          "price": "$110,000",
+          "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600"
+        },
+        {
+          "title": "Parklands Corner Apartment",
+          "location": "Parklands, Nairobi",
+          "price": "$55,000",
+          "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600"
+        }
+      ]
     },
     {
       "id": "3",
       "name": "Amina Oduya",
       "role": "Leasing Consultant",
+      "agency": "Yetu Housing Ltd",
       "email": "amina.oduya@yetuhousing.co.ke",
       "phone": "+254 734 567 890",
-      "description": "Specialist in residential leasing with 6 years helping clients find ideal rental properties across Nairobi's top neighborhoods.",
-      "listings": [ {
-                "title": "bandari estate",
-                "location": "South C, Nairobi",
-                "price": "$10,000",
-                "image": "/images/photo5.avif"
-             },
-                {
-                "title": "Nyayo Estate",
-                "location": "Runda, Nairobi",
-                "price": "$16,000",
-                "image": "/images/photo6.avif"
-                }]
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
+      "serviceAreas": ["Runda", "Muthaiga", "Gigiri", "Karen", "Spring Valley"],
+      "yearsExperience": 6,
+      "totalListings": 38,
+      "rating": 4.7,
+      "languages": ["English", "Swahili", "Luo"],
+      "description": "Amina Oduya is a dedicated Leasing Consultant at Yetu Housing Ltd with 6 years of specialized experience in Nairobi's high-end residential rental market. She has helped hundreds of families and professionals find their perfect rental home across Nairobi's most sought-after neighborhoods including Runda, Muthaiga, and Karen. Amina is celebrated for her warm and patient approach — taking the time to truly understand each client's lifestyle needs and budget before making recommendations. Her deep knowledge of lease agreements, landlord-tenant regulations, and market rental rates ensures her clients always get fair and transparent deals. Amina has a consistent 98% client satisfaction rate and has been recognized internally as Yetu Housing's best leasing consultant for three consecutive years.",
+      "listings": [
+        {
+          "title": "Bandari Estate",
+          "location": "South C, Nairobi",
+          "price": "$10,000",
+          "image": "/images/photo5.avif"
+        },
+        {
+          "title": "Nyayo Estate",
+          "location": "Runda, Nairobi",
+          "price": "$16,000",
+          "image": "/images/photo6.avif"
+        },
+        {
+          "title": "Muthaiga Premium Villa",
+          "location": "Muthaiga, Nairobi",
+          "price": "$22,000",
+          "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600"
+        },
+        {
+          "title": "Gigiri Diplomat Residence",
+          "location": "Gigiri, Nairobi",
+          "price": "$19,500",
+          "image": "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=600"
+        },
+        {
+          "title": "Karen Country Home",
+          "location": "Karen, Nairobi",
+          "price": "$25,000",
+          "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
+        },
+        {
+          "title": "Spring Valley Garden Apartment",
+          "location": "Spring Valley, Nairobi",
+          "price": "$14,000",
+          "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600"
+        }
+      ]
     }
   ],
   "contacts": [
