@@ -283,7 +283,7 @@
 
 .agent-card{
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 320px minmax(0, 1fr);
   grid-row-gap: 15px;
   background-color:#fff;
   border-radius:10px;
@@ -363,6 +363,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 15px 20px;
   border-radius: 10px;
+  min-width: 0;
 
 }
 
@@ -382,6 +383,8 @@
   padding: 10px 5px 20px 5px;
   width: 100%;
   height: fit-content;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 .listing-card{
@@ -481,9 +484,19 @@
   margin-top: auto;   
 }
 
+/* TABLETS & MID-SIZED SCREENS (Up to 768px) */
 @media (max-width: 768px) {
+  /* AGENT GRID CORRECTION */
+  .agent-card {
+    grid-template-columns: 1fr !important; /* Stack columns vertically to avoid crushing */
+    gap: 20px;
+  }
 
-  /* HERO SECTION */
+  /* LISTINGS TRANSITION: Changes into 3 Rows x 2 Columns or 3 Columns depending on item limits */
+  .listings-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
   .home-inside-container {
     height: 60vh;
   }
@@ -500,7 +513,6 @@
     padding: 0 20px;
   }
 
-  /* STATS CARDS ROW — wrap into 2x2 grid */
   .home-mid-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -514,7 +526,6 @@
     padding: 20px 10px;
   }
 
-  /* FEATURED CARDS — stack vertically */
   .home-card {
     flex-direction: column;
     align-items: center;
@@ -526,17 +537,11 @@
     height: auto;
   }
 
-  /* NAVBAR */
   .nav-section {
-    
-  
     gap: 10px;
     padding: 10px;
   }
 
-
-
-  /* CTA SECTION */
   .home-last-section {
     padding: 40px 20px;
     text-align: center;
@@ -544,10 +549,13 @@
   }
 }
 
-/* MOBILE — 480px and below */
+/* MOBILE DEVICES (Up to 480px) */
 @media (max-width: 480px) {
+  /* LISTINGS TRANSITION: Drops directly into a clean 1 column layout */
+  .listings-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
 
-  /* HERO */
   .home-inside-container {
     height: 70vh;
     justify-content: center;
@@ -566,7 +574,6 @@
     font-size: 15px;
   }
 
-  /* STATS CARDS — single column on very small screens */
   .home-mid-section {
     grid-template-columns: 1fr;
     padding: 15px;
@@ -577,13 +584,11 @@
     margin-top: 10px;
   }
 
-  /* FEATURED CARDS */
   .image-card {
     width: 100%;
     height: auto;
   }
 
-  /* NAVBAR */
   .menu-section {
     gap: 12px;
     font-size: 14px;
@@ -597,14 +602,12 @@
     font-size: 18px;
   }
 
-  /* BUTTONS */
   .button-84 {
     font-size: 15px;
     padding: 0 20px;
     height: 44px;
   }
 
-  /* CTA */
   .home-last-section {
     padding: 30px 15px;
     font-size: 14px;
@@ -613,5 +616,13 @@
   .home-last-section h4 {
     font-size: 18px;
     text-align: center;
+  }
+}
+
+/* LARGE SCREENS (DESKTOP) */
+@media (min-width: 992px) {
+  /* LISTINGS TRANSITION: Beautifully layouts into 3 Columns across 2 Rows (6 cards total) */
+  .listings-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
