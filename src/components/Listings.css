@@ -4,7 +4,7 @@
     border: none;
     border-radius: 5px;
     padding: 40px;
-    max-width: 700px;
+    width: 100%;
     background: white;
 }
 .listings-form {
@@ -12,6 +12,7 @@
     flex-direction: column;
     gap: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 40%;
 }
 
 .listings-form label {
@@ -28,7 +29,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 15px;
-    width: 50%;
+    width: 80%;
     box-sizing: border-box;
     margin-left: 20px;
 }
@@ -39,4 +40,12 @@
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+}
+
+.button-84 {
+    width: 220px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }

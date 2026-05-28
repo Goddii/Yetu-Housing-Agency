@@ -67,129 +67,124 @@ export default function Listings() {
 
             </div>
             <div className="listings-container">
-            <form onSubmit={handleSubmit}>
-                <div className="listings-form">
-                    <label>Property Title</label>
-                    <input name="title"
-                           value={formData.title}
-                           onChange={handleChange}
-                           placeholder="e.g Modern Family Home"
-                           required 
-                    />
-                    <label>Location</label>
-                    <input name="location"
-                        value={formData.location}
-                        onChange={handleChange}
-                        placeholder="e.g Kilimani Nairobi"
-                        required
-                    />
-                    <label>Bedrooms</label>
-                    <input 
-                        name="beds"
-                        type="number"
-                        value={formData.beds}
-                        onChange={handleChange}
-                        placeholder="e.g 2"
-                        required
-                    />
-                    <label>Bathrooms</label>
-                    <input 
-                        name="baths"
-                        type="number"
-                        value={formData.baths}
-                        onChange={handleChange}
-                        placeholder="eg. 3"
-                        required
-                    />
-                    <label>Sqft</label>
-                    <input 
-                        name="sqft"
-                        type="number"
-                        value={formData.sqft}
-                        onChange={handleChange}
-                        placeholder="eg 3200"
-                    />
-                    <label>Price $</label>
-                    <input  
-                        name="price"
-                        type="number"
-                        value={formData.price}
-                        onChange={handleChange}
-                        placeholder="e.g $ 200000"
-                        required
+                <form onSubmit={handleSubmit} className='listings-form'>
+                    {/* <div className="listings-form"> */}
+                        <label>Property Title</label>
+                        <input name="title"
+                            value={formData.title}
+                            onChange={handleChange}
+                            placeholder="e.g Modern Family Home"
+                            required 
+                            />
+                        <label>Location</label>
+                        <input name="location"
+                            value={formData.location}
+                            onChange={handleChange}
+                            placeholder="e.g Kilimani Nairobi"
+                            required
+                        />
+                        <label>Bedrooms</label>
+                        <input 
+                            name="beds"
+                            type="number"
+                            value={formData.beds}
+                            onChange={handleChange}
+                            placeholder="e.g 2"
+                            required
+                        />
+                        <label>Bathrooms</label>
+                        <input 
+                            name="baths"
+                            type="number"
+                            value={formData.baths}
+                            onChange={handleChange}
+                            placeholder="eg. 3"
+                            required
+                        />
+                        <label>Sqft</label>
+                        <input 
+                            name="sqft"
+                            type="number"
+                            value={formData.sqft}
+                            onChange={handleChange}
+                            placeholder="eg 3200"
+                        />
+                        <label>Price $</label>
+                        <input  
+                            name="price"
+                            type="number"
+                            value={formData.price}
+                            onChange={handleChange}
+                            placeholder="e.g $ 200000"
+                            required
                         
-                    />
-                    <label>Image url</label>
-                    <input 
-                        name="image"
-                        value={formData.image}
-                        onChange={handleChange}
-                        placeholder="https://images.unsplash.com..."
-                        required
+                        />
+                        <label>Image url</label>
+                        <input 
+                            name="image"
+                            value={formData.image}
+                            onChange={handleChange}
+                            placeholder="https://images.unsplash.com..."
+                            required
 
-                    />
-                    {formData.image && (
-                        <img 
-                            src={formData.image}
-                            alt="preview"
-                            style={{
-                                width: '100%',
-                                maxHeight: '200px',
-                                objectFit: 'cover',
-                                borderRadius: '8px',
-                                margin: '10px 0'
-                            }}
+                        />
+                        {formData.image && (
+                            <img 
+                                src={formData.image}
+                                alt="preview"
+                                    style={{
+                                    width: '100%',
+                                    maxHeight: '200px',
+                                    objectFit: 'cover',
+                                    borderRadius: '8px',
+                                    margin: '10px 0'
+                                }}
                             onError={(e) => e.target.style.display = 'none'}
                         />
                     )}
-                    <label>Description</label>
-                    <textarea  
-                        name="description"
-                        value={formData.description}
-                        onChange={handleChange}
-                        rows='5'
-                        placeholder="Descrive the property...."
-                        required
+                        <label>Description</label>
+                        <textarea  
+                            name="description"
+                            value={formData.description}
+                            onChange={handleChange}
+                            rows='5'
+                            placeholder="Descrive the property...."
+                            required
                         
-                    />
-                    <div style={{display:'inline-block', gap:'10px',fontSize: '14px'}}>
-
-                        <label>
+                        />
+                        <label style={{marginLeft:'20px'}}> Feature this property on the Home page</label>
                         <input 
                             type="checkbox"
                             name="featured"
                             onChange={handleChange}
+                            style={{marginLeft: '0px'}}
                         />
-                            Feature this property on the Home page
-                        </label>
-
-                    </div>
-
-                    <button className="button-84"
+                           
+                        <button className="button-84"
                             type="submit"
                             disabled={loading}
                             style={{ marginTop: '20px'}}
-                    >
+                        >
                         {loading ? 'Adding...' : 'Add Listing'}
-                    </button>
+                        </button>
 
-                    {submitted && (
-                        <div style={{
-                            backgroundColor: '#e6f4ea',
-                            color: '#2d6a4f',
-                            padding: '15px',
-                            borderRadius: '8px',
-                            marginTop: '20px',
-                            textAlign: 'center',
-                            fontWeight: 'bold'
-                        }}>
-                             ✅ Property added! Redirecting to listings...
-                        </div>
-                    )}
+                        {submitted && (
+                            <div style={{
+                                backgroundColor: '#e6f4ea',
+                                color: '#2d6a4f',
+                                padding: '15px',
+                                borderRadius: '8px',
+                                marginTop: '20px',
+                                textAlign: 'center',
+                                fontWeight: 'bold'
+                            }}>
+                                 ✅ Property added! Redirecting to listings...
+                            </div>
+                        )}
 
-                </div>
+                
 
-            </form>
+                </form>
             </div>
         </div>
     )

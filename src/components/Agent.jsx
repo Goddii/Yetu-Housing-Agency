@@ -77,9 +77,9 @@ function Agent() {
                         <div className="listings-container">
                             {agentItem.listings && agentItem.listings.map((listing, index) => (
                                 <div key={index} className="listing-card">
-                                    <div className="listing-blob">
+                                    {/* <div className="listing-blob">
                                         
-                                    </div>
+                                    </div> */}
                                     <div className="listing-bg">
                                         <h4>{listing.title}</h4>
                                         <p><strong>Location:</strong> {listing.location}</p>
